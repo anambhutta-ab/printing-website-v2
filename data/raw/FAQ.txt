@@ -1,0 +1,195 @@
+Are there price breaks for ordering larger quantities of documents?
+We do offer price breaks on higher volume jobs. Please call us at (913) 492-1500 to speak to our sales team.
+
+At what resolution should I save my photos and graphics?
+Picture resolution should be set to 300 dpi at the final use size.
+
+Pictures and graphics pulled from the internet are often low resolution, typically 72 dpi. You should avoid using these low resolution graphics, as they will appear pixilated and blocky when printed.
+
+Also note that you should save all photos in CMYK mode, not RGB mode when possible. Images saved in RGB mode may not print properly. If you are unable to save your image in CYMK mode, please contact us for assistance.
+
+How do I get digital files to 2 Friends Printing?
+The easiest way to submit files is to use our SEND A FILE form. You can also provide your digital files to us on a flash drive, via email, or by ftp. If the file is larger than 5MB, then you should upload the files via our online form. Please call us at (913) 492-1500 if you need assistance.
+
+How do I get an estimate from you?
+Call our sales department at (913) 492-1500, or REQUEST AN ESTIMATE ONLINE.
+
+How do I make a PDF file?
+There are many variables involved in creating PDF files. If you are unfamiliar with creating a print ready PDF please call us for assistance. We would be happy to assist you.
+
+How long does it take for you to complete my order?
+Production times vary widely depending on individual job specifications. Some jobs can be produced in minutes while other jobs may take days. 95% of our jobs are completed and shipped within 1-3 business days or less after you approve your proof. Tight deadlines? We would love to discuss your project and deadlines to see how we can help you.
+
+How long until I receive a proof of my job?
+Digital proofs will typically be sent to you for approval within 1 business day of receiving your electronic files.
+
+Is white considered a printing color?
+Not typically. Because white is the default color of paper, it is simply recognized as the absence of any ink. However, when using colored paper, white ink may be used if any text or graphic requires it.
+
+Should I compress my files using programs like WinZip and StuffIt?If you use our online file upload form, your files will be compressed automatically. If you're sending your files via E-mail or FTP, then compressing large files before sending is a great idea. This allows your document and all supporting files and fonts to be included into one easy to handle file while reducing overall file size.
+
+Tips on how to save your design files
+Most applications allow you to save as, or export to, a PDF file. PDF's include all the necessary fonts and graphics needed for printing your file making them the preferred file format.
+
+What do I need to provide for variable data projects?
+We work with many types of data files, but CSV files are the safest bet. These are data files that have commas separating each field, and returns separating each line of data. To save time and hassle, make sure your data is properly formatted with each piece of data in separate fields.
+
+Complex projects may require other files, like image files or additional data files. If you are unsure of what may be required for a particular variable project, give us a call and we will be happy to assist you.
+
+What file format should I use when submitting my electronic document for printing?
+PDF (Portable Document Format) is the most common and preferred file format for submitting digital documents. With the installation of a PDF print driver on your computer, virtually any program can generate a PDF file suitable for printing. Both commercial and free PDF print drivers are available online for download from different sources.
+
+What format does 2 Friends Printing want my file to be in?
+2 Friends Printing can work with files in several formats. The order of preference is PDF, then Native.
+
+What is Adobe PDF?
+It is the industry standard PDL (page description language) invented by Adobe. PDF can print any kind of document including text, graphics, images and color. It is compatible with all computers and software, and the format DPS prefers.
+
+What is a "proof"?
+A proof is a way of ensuring that all of your text is accurate and that everything is positioned according to your requirements. Typically, we will produce a proof which will be sent to you online or printed on paper which can be viewed in our store or delivered to you in person.
+
+On multiple color jobs, we can produce a color proof on our color output device to show how the different colors will appear.
+
+What is a PDL (Page Description Language)?
+A Page Description Language renders the content of a document in a form akin to a mathematical representation of all the lines, circles and characters it contains. PDL's include Hewlett Packard's Printer Control Language (PCL), HP's Graphics Language (HP-GL), Adobe's PostScript (PS), and Portable Document Format (PDF).
+
+What is different when saving Color Files to PostScript?
+The only difference is the destination printer driver used to make the file. When Digital Printing Services comes to your site to set up the printer drivers, we will address the color file issues.
+
+What is the Pantone Matching System?
+The Pantone Matching System (PMS) is a color reproduction standard in which colors all across the spectrum are each identified by a unique, independent number. The use of PMS allows us to precisely match colors and maintain color consistency throughout the printing process.
+
+What other file formats can I send you?
+Our preferred file format is PDF which is independent of the native program format. We can also work with any Mac or PC version of Adobe Illustrator, Photoshop and Indesign, as well as Microsoft Word and Excel. Please contact us regarding other programs not listed here. When submitting native file formats special consideration is required for fonts and graphics used in the files.
+
+What type of products and services do you provide?
+We are a full service shop and offer a wide range of products and services that include offset, digital and large format printing. To see a full listing and description of what we can offer you, please see the Products and Services area in the Customer Service Section of our website.
+
+What types of Shipping Services do you offer?
+We use UPS as our standard shipping services for locations outside of the Kansas City Metro area. In the Kansas City Metro area, DPS will personally deliver completed jobs.
+
+What types of media do you accept?
+We can take your files on CD, flash drives, portable drives and via email and ftp.
+
+What types of paper are available for me to print on?
+We can help you find just the right paper for your project. Please call our sales team for information on the types, sizes and colors of paper available for your printing needs.
+
+Why do the printed colors look different from the colors on my screen?
+In short, printers and monitors produce colors in very different ways.
+
+Monitors use the RGB (red, green, blue) color model, which usually supports a wider spectrum of colors. Printers use the CMYK (cyan, magenta, yellow, black) color model, which can reproduce most—but not all—of the colors in the RGB color model. Depending on the equipment used, CMYK generally matches 85–90% of the colors in the RGB model.
+
+When a color is selected from the RGB model that is out of the range of the CMYK model, the application chooses what it thinks is the closest color that will match. Programs like Adobe Photoshop will allow you to choose which color will be replaced. Others may not.
+
+When color is critical it is best to allow extra time test prints and color adjustments.
+
+Will the colors on my computer monitor match what is printed?
+Due to our printers being toner based and not ink based, the ability to match and exact PMS color is limited. However, we are able to match most colors that are presented to us for print.
+
+Will you match a sample I print out on my own printer, or a previously printed sample?
+Due to varying technologies used in printing, there is no guarantee that your completed document will match your printed sample. This is due mainly to the varying results from different output devices such as inkjet, bubblejet and laser printers and offset press prints. Even from one commercial printing firm to another, there can be wide differences in results. In an effort to match the color you are looking for, we require that a proof be approved of color printed documents before printing the complete job.
+
+What's the difference between digital and offset printing?
+Digital printing is a state of the art technology utilized for short run needs.
+This form of printing is often called direct to press. There are no plates or costly make-readies involved and your proof is a press proof directly off the press.
+
+Offset Printing is the age old standard of printing all printed matter; (catalogs, product sheets, brochures, mailers etc.) With ink, paper and blanket transfer of image to paper. This form of printing requires a proof of your supplied graphics in the form of an Epson, Kodak or traditional match print proof for approval. Once approved printing plates are made and technical set-up of the press begins. This form of printing is used when quantities of 1M or more units are needed.
+
+Why don't colors in the printed piece look like the colors on my computer screen? What's the difference between RGB and CMYK anyway?
+RGB - Red, Green, and Blue are "additive colors". If we combine red, green and blue light you will get white light. This is the principal behind the T.V. set in your living room and the monitor you are staring at now. Additive color, or RGB mode, is optimized for display on computer monitors and peripherals, most notably scanning devices.
+
+CMYK - Cyan, Magenta and Yellow are "subtractive colors". If we print cyan, magenta and yellow inks on white paper, they absorb the light shining on the page. Since our eyes receive no reflected light from the paper, we perceive black... in a perfect world! The printing world operates in subtractive color, or CMYK mode. In practice, printing subtractive inks may contain impurities that prevent them from absorbing light perfectly. They do a pretty good job with light colors, but when we add them all together, they produce a murky brown rather than black. In order to get decent dark colors, black ink is added in increasing proportions, as the color gets darker and darker. This is the "K" component in CMYK printing. "K" is used to indicate black instead of a "B" to avoid possible confusion over Blue ink.
+
+Always deliver your digital images in CMYK-mode!
+One of the most common errors made by inexperienced graphic designers is submitting RGB files. As a result we must ask if they would like us to convert to CMYK before we send the files for film output. Most of the time, the color change that will occur is slight. However, every once in a while, the color range after conversion is compressed during the transition to CMYK mode resulting in a complete change in color tones. Be warned that there is absolutely no way to get that deep RGB blue using CMYK, no matter how much we want to.
+
+What kinds of printing services do you offer?
+A: We offer a wide range of printing services including business cards, flyers, brochures, banners, posters, stickers, letterheads, envelopes, booklets, and custom packaging. The chatbot can help you choose the right option for your needs.
+
+I am new to printing. Where should I start?
+A: Start by telling the chatbot what you want to print (for example: business cards, event flyers, or shop signage). It will guide you step‑by‑step through material choice, size, design, and pricing.
+
+Do you handle both small and large orders?
+A: Yes. We can print single samples, small batches, and large bulk orders. The chatbot can help you estimate quantity, cost, and turnaround time for any order size.
+
+What paper types do you offer?
+A: We offer common options like matte, glossy, silk, and textured paper, along with different thicknesses (measured in GSM). The chatbot can explain the look and feel of each type in simple terms.
+
+What is GSM and why does it matter?
+A: GSM stands for “grams per square meter” and indicates how thick and sturdy the paper is. Higher GSM means thicker paper, which is better for premium cards or covers, while lower GSM is lighter and good for leaflets.
+
+Which paper is best for business cards?
+A: Business cards usually look best on thicker paper (high GSM) with either a matte or soft‑touch finish for a professional feel. The chatbot can recommend options based on your budget and design.
+
+Which material should I use for outdoor banners?
+A: For outdoor use, we typically suggest durable vinyl or flex material that is weather‑resistant and tear‑resistant. The chatbot can help you choose the right thickness and finishing for wind and sun exposure.
+
+Do you offer eco‑friendly or recycled paper?
+A: Yes, we can provide eco‑friendly paper options such as recycled paper or sustainably sourced stock. If you mention “eco‑friendly” to the chatbot, it will suggest suitable materials.
+
+What standard sizes do you offer for flyers and posters?
+A: We offer common sizes like A5, A4, A3, and larger custom dimensions for posters and banners. The chatbot can explain each size visually (for example, “A4 is the size of a standard office sheet”) to help you decide.
+
+How do I choose the right size for my design?
+A: Think about where your design will be displayed and how far away people will be when they see it. The chatbot can ask a few questions and then recommend a suitable size based on purpose and viewing distance.
+
+Can you print custom sizes?
+A: Yes, we can print custom sizes if you have specific measurements. Just share the height and width with the chatbot, and it will let you know what is possible and how it affects price.
+
+What file formats do you accept for printing?
+A: We usually accept PDF, JPEG, PNG, and sometimes AI or PSD files. The chatbot can explain how to export your design from common software in the right format.
+
+What resolution should my file have?
+A: For clear, sharp printing, we recommend at least 300 DPI resolution. If you are unsure, upload your file and the chatbot can help you check whether it is suitable or needs adjustment.
+
+Can you help me create or improve my design?
+A: Yes, we can assist with simple layout adjustments, text placement, and color suggestions. The chatbot can guide you on basic design tips and, if needed, connect you to our design team.
+
+My design looks fine on screen. Will it look the same when printed?
+Print colors often differ slightly from screen colors because monitors use light (RGB) and printers use ink (CMYK). The chatbot can explain how to adjust colors and choose safe color combinations for consistent results.
+
+Do you provide design templates?
+We can provide simple templates for popular items such as business cards, letterheads, and flyers. The chatbot can share size specifications and guide you on margins and safe areas.
+
+What is the full printing process from start to finish?
+The typical process is: you share your requirements → we confirm material, size, and quantity → you provide or approve the design → we print → we finish and pack → we deliver or you collect. The chatbot can walk you through each step.
+
+How long does printing usually take?
+Turnaround time depends on the type of product and quantity. Simple items like standard business cards or flyers may be ready within a couple of days, while complex or large orders can take longer. The chatbot can give an approximate timeline.
+
+Can I get a sample before full production?
+For many products, we can provide a sample or proof before printing the complete batch. The chatbot will tell you whether samples are available for your chosen product and how they affect price and timing.
+
+What is “proofing” and why is it important?
+Proofing means checking a preview of your design exactly as it will be printed. This helps catch mistakes in text, colors, or layout before we print the full quantity. The chatbot always recommends proofing for important jobs.
+
+What finishing options do you offer?
+We offer options such as lamination (matte or glossy), die‑cutting, foiling, embossing, stapling, binding, and UV coating. The chatbot can explain each finish and how it affects the look and durability of your print.
+
+What is lamination and when should I use it?
+Lamination adds a thin protective film over your printed piece, making it more durable and resistant to fingerprints and moisture. It’s great for frequently handled items like menus and business cards.
+
+What is the difference between matte and glossy finish?
+Matte finish has a smooth, non‑shiny look that feels subtle and professional, while glossy finish is shiny and makes colors pop more. The chatbot can suggest which finish suits your design and use case.
+
+How is the price calculated?
+Price depends mainly on quantity, size, material, colors, finishing, and turnaround time. The chatbot can give you a rough estimate after asking a few questions about your order.
+
+Is there a minimum order quantity?
+Some products have a minimum quantity for cost‑effective printing, while others can be printed in very small numbers. The chatbot will tell you the minimums for each item.
+
+Do you offer discounts for bulk orders?
+Yes, larger quantities usually qualify for better per‑piece pricing. The chatbot can show you how the price changes as you increase the quantity.
+
+Do you offer delivery or only pickup?
+Depending on location, we may offer both delivery and pickup options. The chatbot can tell you what is available in your area and if any delivery charges apply.
+
+What happens if there is a mistake in my order?
+If the printed result clearly differs from the approved proof or agreed specifications, we will review the issue and arrange a reprint or another solution. The chatbot can guide you on how to report a problem.
+
+How should I store printed materials to keep them in good condition?
+Store printed items in a cool, dry place away from direct sunlight and moisture. Keep them flat or properly packed to avoid bending and scratching. The chatbot can give tips based on the material you chose.
+
+I don’t know the exact terms for what I need. Can the chatbot still help?
+Absolutely. You can describe your need in simple language, like “I need cards to give to customers” or “I need a big sign for my shop front.” The chatbot will ask a few easy questions and suggest suitable products, sizes, and materials.
+

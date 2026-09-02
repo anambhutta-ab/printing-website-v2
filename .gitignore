@@ -1,0 +1,45 @@
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Backend secrets and environment files
+.env
+.env.local
+.env.*.local
+
+# Keep safe templates in Git
+!.env.example
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local/generated RAG data
+data/vectorstore/
+data/uploads/
+
+# Frontend generated files and local environment files
+printing-rag-frontend/node_modules/
+printing-rag-frontend/dist/
+printing-rag-frontend/.env
+printing-rag-frontend/.env.local
+printing-rag-frontend/.env.*.local
+
+# Keep frontend template in Git
+!printing-rag-frontend/.env.example
+
+# Editor / operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
