@@ -14,10 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src /app/src
 COPY data /app/data
 
-# Port (SnapDeploy will override PORT at runtime)
+ENV PYTHONPATH=/app
 ENV PORT=8000
 EXPOSE 8000
 
-# Start FastAPI
-# CMD ["uvicorn", "src.printing_rag_bot.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
 CMD ["python", "-m", "uvicorn", "src.printing_rag_bot.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
