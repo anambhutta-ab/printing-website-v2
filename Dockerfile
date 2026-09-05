@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends git \
     && rm -rf /var/lib/apt/lists/*
 
-# Dependencies
+# Force use of requirements.txt only
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -14,7 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src /app/src
 COPY data /app/data
 
+<<<<<<< Updated upstream
 ENV PYTHONPATH=/app
+=======
+# Port
+>>>>>>> Stashed changes
 ENV PORT=8000
 EXPOSE 8000
 
