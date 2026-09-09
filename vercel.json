@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd printing-rag-frontend && npm run build",
+  "outputDirectory": "printing-rag-frontend/dist",
+  "devCommand": "cd printing-rag-frontend && npm run dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
