@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+
 const API_URL =
   import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 
 const EXAMPLE_QUESTIONS = [
   "What paper is best for business cards?",
@@ -12,6 +14,7 @@ const EXAMPLE_QUESTIONS = [
   "Do you have ready-to-buy stationery items?",
 ];
 
+
 const INITIAL_MESSAGE = {
   id: crypto.randomUUID(),
   role: "assistant",
@@ -19,12 +22,19 @@ const INITIAL_MESSAGE = {
   sources: [],
 };
 
+
 function Chatbot({ isOpen, onOpen, onMinimize }) {
   const [question, setQuestion] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState([INITIAL_MESSAGE]);
   const [expandedSourceMessageIds, setExpandedSourceMessageIds] = useState([]);
+  const [chatHeight, setChatHeight] = useState(690); // px
   const messagesEndRef = useRef(null);
+  const containerRef = useRef(null);
+  const resizingRef = useRef(false);
+  const startYRef = useRef(0);
+  const startHeightRef = useRef(0);
+
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({
@@ -32,6 +42,62 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
       block: "end",
     });
   }, [messages, isLoading]);
+
+
+  useEffect(() => {
+    function handleMouseMove(e) {
+      if (!resizingRef.current) return;
+      const deltaY = startYRef.current - e.clientY;
+      let newHeight = startHeightRef.current + deltaY;
+      // Clamp between min and max
+      newHeight = Math.max(320, Math.min(newHeight, Math.min(window.innerHeight * 0.85, 720)));
+      setChatHeight(newHeight);
+    }
+
+    function handleMouseUp() {
+      resizingRef.current = false;
+      document.body.style.userSelect = "";
+      document.body.style.cursor = "";
+    }
+
+    function handleTouchMove(e) {
+      if (!resizingRef.current) return;
+      const touch = e.touches[0];
+      const deltaY = startYRef.current - touch.clientY;
+      let newHeight = startHeightRef.current + deltaY;
+      newHeight = Math.max(320, Math.min(newHeight, Math.min(window.innerHeight * 0.85, 720)));
+      setChatHeight(newHeight);
+    }
+
+    function handleTouchEnd() {
+      resizingRef.current = false;
+      document.body.style.userSelect = "";
+      document.body.style.cursor = "";
+    }
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
+
+
+  function handleResizeStart(e) {
+    resizingRef.current = true;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    startYRef.current = clientY;
+    startHeightRef.current = chatHeight;
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "ns-resize";
+  }
+
 
   function handleClearChat() {
     if (isLoading) {
@@ -49,6 +115,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
     setExpandedSourceMessageIds([]);
   }
 
+
   function handleExampleQuestion(exampleQuestion) {
     if (isLoading) {
       return;
@@ -56,6 +123,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
 
     setQuestion(exampleQuestion);
   }
+
 
   function toggleSources(messageId) {
     setExpandedSourceMessageIds((currentIds) => {
@@ -68,6 +136,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
       return [...currentIds, messageId];
     });
   }
+
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -135,29 +204,39 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
       setIsLoading(false);
     }
   }
-  if (!isOpen) {
-  return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-brand-ruby px-4 py-3 text-sm font-semibold text-white shadow-xl transition hover:bg-brand-ruby-dark hover:shadow-2xl sm:bottom-5 sm:right-5 sm:gap-3 sm:px-5 sm:py-4"
-      aria-label="Open Communicare Printing Assistant"
-    >
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-lg">
-        ✦
-      </span>
 
-      <span>Ask the assistant</span>
-    </button>
-  );
-}
+  if (!isOpen) {
+    return (
+      <button
+        type="button"
+        onClick={onOpen}
+        className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-brand-navy px-4 py-3 
+        drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] text-base text-brand-background shadow-xl transition hover:bg-brand-primary
+         hover:shadow-2xl hover:text-white sm:bottom-5 sm:right-5 sm:gap-3 sm:px-5 sm:py-4"
+
+        aria-label="Open Communicare Printing Assistant"
+      >
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-background/15 text-lg">
+          ✦
+        </span>
+
+        <span>Ask the assistant</span>
+      </button>
+    );
+  }
+
   return (
-    <div className="fixed inset-0 z-50 flex w-full flex-col overflow-hidden bg-white shadow-2xl lg:inset-auto lg:bottom-5 lg:right-5 lg:h-auto lg:w-[calc(100%-2.5rem)] lg:max-w-2xl lg:rounded-2xl lg:ring-1 lg:ring-slate-200">
+    <div
+      ref={containerRef}
+      className="fixed inset-0 z-50 flex min-h-0 w-full flex-col overflow-hidden bg-white shadow-2xl lg:inset-auto lg:bottom-5 
+      lg:right-5 lg:h-auto lg:max-h-[calc(100vh-2.5rem)] lg:w-[calc(100%-2.5rem)] lg:max-w-xl lg:rounded-2xl lg:ring-1 lg:ring-slate-200"
+      style={{ height: chatHeight }}
+    >
       <div className="flex items-center justify-between bg-brand-navy px-4 py-4 text-white lg:px-5">
         <div>
           <p className="font-semibold">Communicare Assistant</p>
 
-          <p className="text-xs text-brand-gold">
+          <p className="text-xs text-brand-muted">
             {isLoading ? "Searching our printing knowledge base..." : "Online"}
           </p>
         </div>
@@ -167,7 +246,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
             type="button"
             onClick={handleClearChat}
             disabled={isLoading}
-            className="rounded-md px-2 py-1 text-xs text-slate-300 transition hover:bg-slate-800 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-md px-2 py-1 text-sm text-brand-background transition hover:bg-brand-primary hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
           >
             Clear
           </button>
@@ -175,7 +254,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
           <button
             type="button"
             onClick={onMinimize}
-            className="rounded-md px-2 py-1 text-xl text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            className="rounded-md px-2 py-1 text-xl text-brand-background transition hover:bg-brand-primary hover:text-white"
             aria-label="Minimize chatbot"
             title="Minimize chat"
           >
@@ -184,13 +263,13 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
         </div>
       </div>
 
-      <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto 	bg-brand-background p-4 lg:h-[32rem] lg:flex-none">
+      <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto bg-white p-4">
         {messages.map((message) => (
           <div
             key={message.id}
             className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-6 ${message.role === "user"
-              ? "ml-auto rounded-br-none bg-brand-ruby text-white"
-              : "rounded-bl-none bg-white text-brand-ink shadow-sm ring-1 ring-brand-border"
+              ? "ml-auto rounded-br-none bg-brand-secondary text-white"
+              : "rounded-bl-none bg-brand-navy text-white shadow-sm ring-1 ring-brand-border"
               }`}
           >
             <div className="chat-markdown">
@@ -202,7 +281,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   strong: ({ children }) => (
-                    <strong className="font-bold text-slate-900">
+                    <strong className="font-bold text-brand-primary">
                       {children}
                     </strong>
                   ),
@@ -224,19 +303,19 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   h1: ({ children }) => (
-                    <h1 className="mb-3 mt-4 text-xl font-bold text-slate-900">
+                    <h1 className="mb-3 mt-4 text-xl font-bold text-brand-text">
                       {children}
                     </h1>
                   ),
 
                   h2: ({ children }) => (
-                    <h2 className="mb-3 mt-4 text-lg font-bold text-slate-900">
+                    <h2 className="mb-3 mt-4 text-lg font-bold text-brand-text">
                       {children}
                     </h2>
                   ),
 
                   h3: ({ children }) => (
-                    <h3 className="mb-2 mt-3 font-bold text-slate-900">
+                    <h3 className="mb-2 mt-3 font-bold text-brand-text">
                       {children}
                     </h3>
                   ),
@@ -250,13 +329,13 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   thead: ({ children }) => (
-                    <thead className="bg-brand-background text-slate-800">
+                    <thead className="bg-brand-background text-brand-text">
                       {children}
                     </thead>
                   ),
 
                   tbody: ({ children }) => (
-                    <tbody className="divide-y divide-slate-200 bg-white">
+                    <tbody className="divide-y divide-brand-border bg-brand-surface">
                       {children}
                     </tbody>
                   ),
@@ -278,7 +357,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   blockquote: ({ children }) => (
-                    <blockquote className="my-3 border-l-4 border-brand-ruby pl-4 italic text-brand-muted">
+                    <blockquote className="my-3 border-l-4 border-brand-primary pl-4 italic text-brand-muted">
                       {children}
                     </blockquote>
                   ),
@@ -293,7 +372,8 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                 <button
                   type="button"
                   onClick={() => toggleSources(message.id)}
-                  className="flex items-center gap-2 text-xs font-semibold text-brand-ruby transition hover:text-brand-ruby-dark"
+                  className="flex items-center gap-2 text-xs font-semibold text-brand-navy transition 
+                  hover:text-brand-primary"
                   aria-expanded={expandedSourceMessageIds.includes(message.id)}
                 >
                   <span>
@@ -313,13 +393,13 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                     {message.sources.map((source, index) => (
                       <article
                         key={`${message.id}-${source.source}-${index}`}
-                        className="rounded-lg border border-brand-border bg-brand-rose p-3 text-xs text-brand-muted"
+                        className="rounded-lg border border-brand-border bg-brand-surface p-3 text-xs text-brand-muted"
                       >
-                        <p className="font-semibold text-brand-ink">
+                        <p className="font-semibold text-brand-text">
                           {source.source}
                         </p>
 
-                        <p className="mt-1 leading-5 text-slate-500">
+                        <p className="mt-1 leading-5 text-brand-muted">
                           {source.snippet}
                         </p>
                       </article>
@@ -333,17 +413,18 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
 
         {isLoading && (
           <div className="flex w-fit items-center gap-1 rounded-2xl rounded-bl-none bg-white px-4 py-3 shadow-sm">
-            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-ruby [animation-delay:-0.3s]" />
-            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-ruby [animation-delay:-0.15s]" />
-            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-ruby" />
+            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-navy [animation-delay:-0.3s]" />
+            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-navy [animation-delay:-0.15s]" />
+            <span className="h-2 w-2 animate-bounce rounded-full bg-brand-navy" />
           </div>
         )}
 
         <div ref={messagesEndRef} />
       </div>
+
       {messages.length === 1 && !isLoading && (
-        <div className="mb-2">
-          <p className="mb-4 pl-4 text-s font-semibold uppercase tracking-[0.16em] text-brand-muted">
+        <div className="shrink-0  p-3 sm:p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-navy">
             Ask a quick question
           </p>
 
@@ -353,7 +434,9 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                 key={exampleQuestion}
                 type="button"
                 onClick={() => handleExampleQuestion(exampleQuestion)}
-                className="w-full text-left text-xs font-semibold rounded-full border border-brand-border bg-brand-background px-4 py-2.5 text-brand-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-ruby hover:text-brand-ruby hover:shadow-sm"
+                className="flex h-10 w-full items-center text-left text-xs font-semibold rounded-xl border border-brand-border
+                bg-brand-primary px-3 py-2 text-slate-200 transition-all duration-200 sm:h-14 sm:px-4
+                hover:bg-brand-navy hover:border-brand-primary hover:text-white hover:shadow-sm"
               >
                 {exampleQuestion}
               </button>
@@ -361,9 +444,10 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
           </div>
         </div>
       )}
+
       <form
         onSubmit={handleSubmit}
-        className="flex gap-2 border-t bg-white p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
+        className="flex gap-2 border-t bg-brand-surface p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
       >
         <input
           type="text"
@@ -371,19 +455,30 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
           onChange={(event) => setQuestion(event.target.value)}
           placeholder="Ask about printing..."
           disabled={isLoading}
-          className="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-ruby focus:ring-2 focus:ring-brand-ruby/15 disabled:bg-brand-background"
+          className="min-w-0 flex-1 rounded-lg border border-brand-border bg-brand-surface px-3 py-2 text-sm text-brand-text outline-none
+           focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/15 disabled:bg-brand-background"
         />
 
         <button
           type="submit"
           disabled={isLoading}
-          className="rounded-lg bg-brand-navy-dark px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:bg-orange-300"
+          className="rounded-lg bg-brand-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-navy disabled:cursor-not-allowed disabled:bg-brand-muted"
         >
           Send
         </button>
       </form>
+
+      {/* Resize handle */}
+      <div
+        onMouseDown={handleResizeStart}
+        onTouchStart={handleResizeStart}
+        className="h-3 w-full cursor-ns-resize select-none border-t border-brand-border bg-brand-background/60 transition hover:bg-brand-border/40"
+        title="Drag to resize"
+        aria-label="Resize chatbot height"
+      />
     </div>
   );
 }
+
 
 export default Chatbot;
