@@ -115,7 +115,7 @@ function Quote() {
         path="/quote"
       />
       <section
-        className="bg-brand-navy px-4 py-16 text-white sm:px-6 sm:py-20"
+        className="bg-brand-navy px-4 py-12 text-white sm:px-6 sm:py-20"
         style={{
           background:
             "linear-gradient(180deg, #1f2430 15%, #456882 75%, #DDDDDD 100%)",
@@ -124,22 +124,22 @@ function Quote() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-base font-semibold uppercase tracking-[0.2em] text-brand-surface">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-surface sm:text-base sm:tracking-[0.2em]">
                 Get a quote</p>
-            <h1 className="mt-3 text-3xl font-bold sm:text-5xl text-slate-300">
+            <h1 className="mt-3 text-2xl font-bold text-slate-300 sm:text-5xl">
                 Tell us what you need printed.</h1>
-            <p className="mt-5 text-base leading-7 text- sm:text-lg sm:leading-8">
+            <p className="mt-4 text-sm leading-6 text-slate-200 sm:mt-5 sm:text-lg sm:leading-8">
                 Every project is different. Tell us what you need and we'll get back to you with a clear, no-obligation quote.</p>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="mt-10 grid gap-6 rounded-2xl border border-white/10 bg-brand-surface p-5 text-brand-text shadow-2xl sm:p-8 lg:grid-cols-2">
+          <form onSubmit={handleSubmit} noValidate className="mt-7 grid gap-4 rounded-2xl border border-white/10 bg-brand-surface p-4 text-brand-text shadow-2xl sm:mt-10 sm:gap-6 sm:p-8 lg:grid-cols-2">
             <FormField label="Name" name="name" value={form.name} onChange={handleChange} error={errors.name} required autoComplete="name" />
             <FormField label="Phone Number" name="phone" value={form.phone} onChange={handleChange} error={errors.phone} required placeholder="03XXxxxxxxxx" inputMode="tel" autoComplete="tel" maxLength={11} />
             <FormField label="Email" name="email" value={form.email} onChange={handleChange} error={errors.email} type="email" autoComplete="email" />
             <FormField label="Company" name="company" value={form.company} onChange={handleChange} autoComplete="organization" />
 
             <div>
-              <label htmlFor="productType" className="mb-2 block text-lg font-semibold text-brand-text">Product type <span className="text-brand-primary">*</span></label>
+              <label htmlFor="productType" className="mb-1.5 block text-base font-semibold text-brand-text sm:mb-2 sm:text-lg">Product type <span className="text-brand-primary">*</span></label>
               <select id="productType" name="productType" value={form.productType} onChange={handleChange} required aria-invalid={Boolean(errors.productType)} aria-describedby={errors.productType ? "productType-error" : undefined} className={fieldClass(errors.productType)}>
                 <option value="">Select a product</option>
                 {PRODUCT_OPTIONS.map((option) => <option key={option} value={option}>{option}</option>)}
@@ -150,7 +150,7 @@ function Quote() {
             <FormField label="Quantity" name="quantity" value={form.quantity} onChange={handleChange} error={errors.quantity} required type="number" min="1" step="1" inputMode="numeric" />
 
             <div className="lg:col-span-2">
-              <label htmlFor="description" className="mb-2 block text-lg font-semibold text-brand-text">Description / Requirements <span className="text-brand-primary">*</span></label>
+              <label htmlFor="description" className="mb-1.5 block text-base font-semibold text-brand-text sm:mb-2 sm:text-lg">Description / Requirements <span className="text-brand-primary">*</span></label>
               <textarea id="description" name="description" value={form.description} onChange={handleChange} placeholder="I want visiting cards with 3 colors on it, with the following details..." required minLength={20} maxLength={1000} rows={5} aria-invalid={Boolean(errors.description)} aria-describedby="description-help description-error" className={fieldClass(errors.description)} />
               <div className="mt-2 flex justify-between gap-4 text-xs text-brand-muted"><span>{form.description.length}/1000</span></div>
               <FieldError id="description-error" message={errors.description} />
@@ -161,7 +161,7 @@ function Quote() {
 
             <div className="lg:col-span-2">
               {status === "success" && <output className="mb-4 block rounded-lg border border-emerald-400/40 bg-emerald-400/10 p-3 text-sm text-emerald-700">Your quote request is ready. Please send the prefilled message to complete your request.</output>}
-              {status === "error" && <div role="alert" className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-red-400/40 bg-red-400/10 p-3 text-sm text-red-700"><span>Failed to open WhatsApp. Please try again or contact us directly at +92 321 8446614.</span><button type="button" onClick={() => setStatus("idle")} className="font-semibold underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary">Try again</button></div>}
+              {status === "error" && <div role="alert" className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-red-400/40 bg-red-400/10 p-3 text-sm text-red-700"><span>Failed to open WhatsApp. Please try again or contact us directly at +92 321 8446614.</span><button type="button" onClick={() => setStatus("idle")} className="font-semibold underline transition hover:text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary">Try again</button></div>}
               <button type="submit" disabled={status === "submitting"} className="w-full rounded-lg bg-brand-primary px-5 py-3 font-semibold text-white transition hover:bg-brand-navy hover:text-brand-background focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary disabled:cursor-wait disabled:opacity-70 sm:w-auto">{status === "submitting" ? "Submitting..." : "Send quote request"}</button>
             </div>
           </form>
@@ -173,15 +173,15 @@ function Quote() {
 
 function FormField({ label, name, value, onChange, error, required = false, type = "text", ...props }) {
   const errorId = `${name}-error`;
-  return <div><label htmlFor={name} className="mb-2 block text-lg font-semibold text-brand-text">{label} {required && <span className="text-brand-primary">*</span>}</label><input id={name} name={name} type={type} value={value} onChange={onChange} required={required} aria-invalid={Boolean(error)} aria-describedby={error ? errorId : undefined} className={fieldClass(error)} {...props} /><FieldError id={errorId} message={error} /></div>;
+  return <div><label htmlFor={name} className="mb-1.5 block text-base font-semibold text-brand-text sm:mb-2 sm:text-lg">{label} {required && <span className="text-brand-primary">*</span>}</label><input id={name} name={name} type={type} value={value} onChange={onChange} required={required} aria-invalid={Boolean(error)} aria-describedby={error ? errorId : undefined} className={fieldClass(error)} {...props} /><FieldError id={errorId} message={error} /></div>;
 }
 
 function FieldError({ id, message }) {
-  return message ? <p id={id} className="mt-2 text-lg font-medium text-red-700" role="alert">{message}</p> : null;
+  return message ? <p id={id} className="mt-2 text-sm font-medium text-red-700 sm:text-lg" role="alert">{message}</p> : null;
 }
 
 function fieldClass(error) {
-  return `w-full rounded-lg border bg-brand-background px-3 py-3 text-brand-text outline-none transition placeholder:text-brand-muted focus:border-brand-secondary focus:ring-2 focus:ring-brand-secondary/40 ${error ? "border-red-500" : "border-brand-border"}`;
+  return `w-full rounded-lg border bg-brand-background px-3 py-2.5 text-sm text-brand-text outline-none transition placeholder:text-brand-muted focus:border-brand-secondary focus:ring-2 focus:ring-brand-secondary/40 sm:py-3 sm:text-base ${error ? "border-red-500" : "border-brand-border"}`;
 }
 
 export default Quote;

@@ -13,7 +13,7 @@ function Services({ onOpenChat }) {
       />
       <section
         id="ready-to-buy"
-        className="relative px-4 py-16 sm:px-6 sm:py-20"
+        className="relative px-4 py-12 sm:px-6 sm:py-20"
         style={{
           background:
             "linear-gradient(180deg, #1f2430 15%, #456882 75%, #DDDDDD 100%)",
@@ -21,13 +21,13 @@ function Services({ onOpenChat }) {
         }}
       >
         <div className="mx-auto max-w-7xl">
-          <p className="text-base font-semibold uppercase tracking-[0.2em] text-brand-surface">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-surface sm:text-base sm:tracking-[0.2em]">
             Ready-to-buy items
           </p>
-          <h2 className="mt-3 text-3xl font-bold text-slate-300 sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-bold text-slate-300 sm:text-4xl">
             Coming Soon!
           </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
             {READY_TO_BUY_ITEMS.map((item) => (
               <CatalogueCard
                 key={item.id}

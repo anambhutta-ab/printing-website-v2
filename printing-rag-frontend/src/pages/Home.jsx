@@ -24,24 +24,24 @@ function Home() {
         path="/"
       />
       <section className="relative overflow-hidden text-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[560px] 
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:gap-10 sm:px-6 sm:py-20 lg:min-h-[560px] 
         lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-12">
           <div className="relative z-10">
-            <p className="mb-5 font-semibold uppercase tracking-[0.2em] text-brand-secondary sm:text-base sm:tracking-[0.28em]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-secondary sm:mb-5 sm:text-base sm:tracking-[0.28em]">
               Quality printing, made simple
             </p>
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Custom Printing Solutions for Your Brand
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-brand-background sm:text-lg sm:leading-8">
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-brand-background sm:mt-6 sm:text-lg sm:leading-8">
               From ideas to prints, we make the process simple, transparent and
               stress free.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 to="/about#our-services"
-                className="rounded-lg border border-brand-background px-6 py-3 text-center font-semibold text-brand-background
+                className="rounded-lg border border-brand-background px-4 py-2.5 text-center text-sm font-semibold text-brand-background
                 transition hover:border-white hover:bg-white/10 focus-visible:outline-2
                  focus-visible:outline-offset-2 focus-visible:outline-white"
               >
@@ -50,11 +50,13 @@ function Home() {
               <div className="relative">
                 <details className="group">
                   <summary
-                    className="flex cursor-pointer items-center justify-between rounded-lg border border-white/40 px-6 py-3 font-semibold text-white
+                    className="flex w-full cursor-pointer items-center justify-center rounded-lg border border-white/40 px-4 py-2.5 text-sm font-semibold text-white
                     transition hover:border-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     <span>Explore Products</span>
-                    <span className="ml-2 text-sm">⏷</span>
+                    <svg className="ml-3 h-4 w-4 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="m5 7 5 5 5-5" />
+                    </svg>
                   </summary>
 
                   <div className="absolute right-0 z-50 mt-2 w-48 overflow-hidden rounded-lg border border-white/40 bg-[#1f2430] shadow-lg">
@@ -77,7 +79,7 @@ function Home() {
 
               <Link
                 to="/quote"
-                className="rounded-lg bg-brand-background px-6 py-3 text-center font-semibold text-brand-navy transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-background"
+                className="rounded-lg bg-brand-background px-4 py-2.5 text-center text-sm font-semibold text-brand-navy transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-background"
               >
                 Get a Quote
               </Link>
@@ -99,20 +101,20 @@ function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           {destinations.map(([title, description, to]) =>
-            <Link key={to} to={to} className="rounded-2xl border border-brand-border bg-brand-text p-6
+            <Link key={to} to={to} className="rounded-2xl border border-brand-border bg-brand-text p-4
          transition hover:-translate-y-1 hover:border-brand-primary hover:shadow-lg">
-              <h2 className="text-2xl font-bold text-brand-surface">
+              <h2 className="text-xl font-bold text-brand-surface sm:text-2xl">
                 {title}</h2><p className="mt-3 leading-7 text-brand-surface">
                 {description}</p>
-              <span className="mt-5 inline-block font-semibold text-brand-secondary">
+              <span className="mt-4 inline-block text-sm font-semibold text-brand-secondary sm:mt-5">
                 Learn more →</span>
             </Link>)}
         </div>
       </section>
-      <section className="px-4 pb-10 pt-8 sm:px-6 sm:pb-14 sm:pt-10">
+      <section className="px-4 pb-8 pt-6 sm:px-6 sm:pb-14 sm:pt-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex justify-center">
             <img
