@@ -2,10 +2,10 @@ from pathlib import Path
 from typing import Optional
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from .index import build_text_corpus
 
-DEFAULT_EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
 
 
 class VectorStoreManager:
@@ -14,13 +14,13 @@ class VectorStoreManager:
         persist_directory: str | Path = "data/vectorstore",
         collection_name: str = "printing_rag",
         embedding_model_name: str = DEFAULT_EMBEDDING_MODEL,
-        embeddings: Optional[HuggingFaceEmbeddings] = None,
+        embeddings: Optional[OpenAIEmbeddings] = None,
     ) -> None:
         self.persist_directory = str(persist_directory)
         self.collection_name = collection_name
-        self.embeddings = embeddings or HuggingFaceEmbeddings(
-            model_name=embedding_model_name
-        )
+        self.embeddings = embeddings or OpenAIEmbeddings(
+    model=embedding_model_name
+)
         self._vectorstore: Optional[Chroma] = None
 
     def build_from_documents(self, documents: list[Document]) -> Chroma:
