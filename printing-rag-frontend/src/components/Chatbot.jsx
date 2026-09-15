@@ -18,7 +18,7 @@ const EXAMPLE_QUESTIONS = [
 const INITIAL_MESSAGE = {
   id: crypto.randomUUID(),
   role: "assistant",
-  text: "Hello! I can help you with printing services, paper types, sizes, and finishes.",
+  text: "Hello! I can help you with printing services, paper types, sizes, and finishes. I can help you understand our process and the information we need for custom orders. How can I assist you today?",
   sources: [],
 };
 
@@ -194,7 +194,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
         {
           id: crypto.randomUUID(),
           role: "assistant",
-          text: "I could not connect to the backend. Please make sure FastAPI is running.",
+          text: "I'm having trouble connecting right now. Let's try that again in a few moments.",
           sources: [],
         },
       ]);
