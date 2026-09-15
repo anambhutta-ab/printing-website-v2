@@ -3,27 +3,19 @@
 
 
 from pathlib import Path
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
 from printing_rag_bot.rag.pipeline import RAGPipeline
-
 
 app = FastAPI(title="Printing RAG API")
 
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "https://communicareptg.vercel.app/",
-    ],
-    allow_credentials=True,
+app.add_middleware(CORSMiddleware, 
+    allow_origins=["https://vercel.app"],
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
+
 
 
 class ChatRequest(BaseModel):
