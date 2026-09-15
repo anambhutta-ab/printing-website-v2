@@ -39,7 +39,7 @@ class ChatResponse(BaseModel):
 rag_pipeline = RAGPipeline(
     persist_directory=Path("data/vectorstore"),
     collection_name="printing_rag",
-    model_name="openai/gpt-oss-20b",
+    model_name="llama-3.1-8b-instant",
 )
 
 
