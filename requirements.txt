@@ -8,7 +8,6 @@ langchain-text-splitters
 langchain-chroma
 langchain-openai
 chromadb
-sentence-transformers
 python-dotenv
 pydantic
 pydantic-settings
