@@ -1,15 +1,17 @@
-from dotenv import load_dotenv
-from pydantic_settings import BaseSettings
+from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-load_dotenv()
 
 class Settings(BaseSettings):
-    groq_api_key: str
-    google_api_key: str  
+    groq_api_key: str = Field(..., validation_alias="GROQ_API_KEY")
+    google_api_key: str = Field(..., validation_alias="GOOGLE_API_KEY")
 
-    class Config:
-        env_file = ".env"
-        extra = "ignore"
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        case_sensitive=False,
+    )
 
 
 settings = Settings()
