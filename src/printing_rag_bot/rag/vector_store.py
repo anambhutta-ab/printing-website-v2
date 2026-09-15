@@ -3,9 +3,11 @@ from typing import Optional
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+
+from printing_rag_bot.config import settings
 from .index import build_text_corpus
 
-DEFAULT_EMBEDDING_MODEL = "text-embedding-004"
+DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
 
 
 class VectorStoreManager:
@@ -19,7 +21,8 @@ class VectorStoreManager:
         self.persist_directory = str(persist_directory)
         self.collection_name = collection_name
         self.embeddings = embeddings or GoogleGenerativeAIEmbeddings(
-            model=embedding_model_name
+            model=embedding_model_name,
+            google_api_key=settings.google_api_key,
         )
         self._vectorstore: Optional[Chroma] = None
 
