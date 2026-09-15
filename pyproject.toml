@@ -10,12 +10,10 @@ dependencies = [
   "langchain",
   "langchain-community",
   "chromadb",
-  "openai",
   "pydantic>=2.0",
   "python-dotenv",
-  "langchain-huggingface",
-  "sentence-transformers",
   "langchain-chroma",
+  "langchain-google-genai",
   "langchain-groq",
   "groq",
 ]

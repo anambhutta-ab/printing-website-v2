@@ -2,10 +2,10 @@ from pathlib import Path
 from typing import Optional
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from .index import build_text_corpus
 
-DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
+DEFAULT_EMBEDDING_MODEL = "text-embedding-004"
 
 
 class VectorStoreManager:
@@ -14,13 +14,13 @@ class VectorStoreManager:
         persist_directory: str | Path = "data/vectorstore",
         collection_name: str = "printing_rag",
         embedding_model_name: str = DEFAULT_EMBEDDING_MODEL,
-        embeddings: Optional[OpenAIEmbeddings] = None,
+        embeddings: Optional[GoogleGenerativeAIEmbeddings] = None,
     ) -> None:
         self.persist_directory = str(persist_directory)
         self.collection_name = collection_name
-        self.embeddings = embeddings or OpenAIEmbeddings(
-    model=embedding_model_name
-)
+        self.embeddings = embeddings or GoogleGenerativeAIEmbeddings(
+            model=embedding_model_name
+        )
         self._vectorstore: Optional[Chroma] = None
 
     def build_from_documents(self, documents: list[Document]) -> Chroma:

@@ -6,7 +6,7 @@ langchain-community
 langchain-groq
 langchain-text-splitters
 langchain-chroma
-langchain-openai
+langchain-google-genai
 chromadb
 python-dotenv
 pydantic
