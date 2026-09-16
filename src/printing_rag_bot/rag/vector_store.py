@@ -9,8 +9,7 @@ from printing_rag_bot.config import settings
 from .index import build_text_corpus
 
 # Standard Google AI Studio stable text embedding model
-DEFAULT_EMBEDDING_MODEL = "models/gemini-embedding-001"
-
+DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
 
 class VectorStoreManager:
     def __init__(
@@ -19,7 +18,7 @@ class VectorStoreManager:
         collection_name: str = "printing_rag",
         embedding_model_name: str = DEFAULT_EMBEDDING_MODEL,
         embeddings: Optional[GoogleGenerativeAIEmbeddings] = None,
-    ) -> None:
+        ) -> None:
         self.persist_directory = str(persist_directory)
         self.collection_name = collection_name
 
@@ -31,11 +30,12 @@ class VectorStoreManager:
             )
 
         self.embeddings = embeddings or GoogleGenerativeAIEmbeddings(
-            model=embedding_model_name,
-            google_api_key=google_api_key,
-        )
-        self._vectorstore: Optional[Chroma] = None
-
+                    model=embedding_model_name,
+                    google_api_key=google_api_key,
+                    task_type="retrieval_document",  # ← you already added this
+                    output_dimensionality=768,  # ← you already added this
+                )
+        self._vectorstore: Optional[Chroma] = None 
     def build_from_documents(self, documents: list[Document]) -> Chroma:
         if not documents:
             raise ValueError("No documents provided to build vector store")

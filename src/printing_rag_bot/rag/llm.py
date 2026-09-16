@@ -7,7 +7,7 @@ from printing_rag_bot.rag.prompts import build_rag_prompt
 class GroqLLMService:
     def __init__(
         self,
-        model_name: str = "llama-3.1-8b-instant",
+        model_name: str = "openai/gpt-oss-120b",
         temperature: float = 0.2,
     ) -> None:
         if not settings.groq_api_key:

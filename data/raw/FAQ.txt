@@ -1,32 +1,29 @@
 Are there price breaks for ordering larger quantities of documents?
-We do offer price breaks on higher volume jobs. Please call us at (913) 492-1500 to speak to our sales team.
-
-At what resolution should I save my photos and graphics?
-Picture resolution should be set to 300 dpi at the final use size.
+We do offer price breaks on higher volume jobs. Please call us at (+92) 321-8446614 to speak to our sales team.
 
 Pictures and graphics pulled from the internet are often low resolution, typically 72 dpi. You should avoid using these low resolution graphics, as they will appear pixilated and blocky when printed.
 
-Also note that you should save all photos in CMYK mode, not RGB mode when possible. Images saved in RGB mode may not print properly. If you are unable to save your image in CYMK mode, please contact us for assistance.
-
-How do I get digital files to 2 Friends Printing?
-The easiest way to submit files is to use our SEND A FILE form. You can also provide your digital files to us on a flash drive, via email, or by ftp. If the file is larger than 5MB, then you should upload the files via our online form. Please call us at (913) 492-1500 if you need assistance.
-
+How do I get digital files to Communicare Printing?
+The easiest way to submit files is to use our Email: . You can also provide your digital files to us via Whatsapp or google drive link. 
 How do I get an estimate from you?
-Call our sales department at (913) 492-1500, or REQUEST AN ESTIMATE ONLINE.
+Call our sales department at (+92) 321-8446614, or REQUEST AN ESTIMATE ONLINE through Get a Quote form on website.
 
 How do I make a PDF file?
-There are many variables involved in creating PDF files. If you are unfamiliar with creating a print ready PDF please call us for assistance. We would be happy to assist you.
+There are many variables involved in creating PDF files. If you are unfamiliar with creating a print ready PDF please call us for assistance. 
+We would be happy to assist you.
 
 How long does it take for you to complete my order?
-Production times vary widely depending on individual job specifications. Some jobs can be produced in minutes while other jobs may take days. 95% of our jobs are completed and shipped within 1-3 business days or less after you approve your proof. Tight deadlines? We would love to discuss your project and deadlines to see how we can help you.
+Production times vary widely depending on individual job specifications. Some jobs can be produced in a day while other jobs may take multiple days. 95% of our jobs are completed and shipped within 1-3 business days or less after you approve your proof. 
+Tight deadlines? We would love to discuss your project and deadlines to see how we can help you.
 
 How long until I receive a proof of my job?
 Digital proofs will typically be sent to you for approval within 1 business day of receiving your electronic files.
 
 Is white considered a printing color?
-Not typically. Because white is the default color of paper, it is simply recognized as the absence of any ink. However, when using colored paper, white ink may be used if any text or graphic requires it.
+Not typically. Because white is the default color of paper, it is simply recognized as the absence of any ink. 
+However, when using colored paper, white ink may be used if any text or graphic requires it.
 
-Should I compress my files using programs like WinZip and StuffIt?If you use our online file upload form, your files will be compressed automatically. If you're sending your files via E-mail or FTP, then compressing large files before sending is a great idea. This allows your document and all supporting files and fonts to be included into one easy to handle file while reducing overall file size.
+Should I compress my files using programs like WinZip and StuffIt?If you use our online file upload form, your files will be compressed automatically. If you're sending your files via E-mail or Whatsapp, then compressing large files before sending is a great idea. This allows your document and all supporting files and fonts to be included into one easy to handle file while reducing overall file size.
 
 Tips on how to save your design files
 Most applications allow you to save as, or export to, a PDF file. PDF's include all the necessary fonts and graphics needed for printing your file making them the preferred file format.
@@ -39,8 +36,8 @@ Complex projects may require other files, like image files or additional data fi
 What file format should I use when submitting my electronic document for printing?
 PDF (Portable Document Format) is the most common and preferred file format for submitting digital documents. With the installation of a PDF print driver on your computer, virtually any program can generate a PDF file suitable for printing. Both commercial and free PDF print drivers are available online for download from different sources.
 
-What format does 2 Friends Printing want my file to be in?
-2 Friends Printing can work with files in several formats. The order of preference is PDF, then Native.
+What format does Communicare Printing want my file to be in?
+Communicare Printing can work with files in several formats. The order of preference is PDF, then Native.
 
 What is Adobe PDF?
 It is the industry standard PDL (page description language) invented by Adobe. PDF can print any kind of document including text, graphics, images and color. It is compatible with all computers and software, and the format DPS prefers.
@@ -69,7 +66,7 @@ What types of Shipping Services do you offer?
 We use UPS as our standard shipping services for locations outside of the Kansas City Metro area. In the Kansas City Metro area, DPS will personally deliver completed jobs.
 
 What types of media do you accept?
-We can take your files on CD, flash drives, portable drives and via email and ftp.
+We can take your files on portable drives and via email and Whatsapp.
 
 What types of paper are available for me to print on?
 We can help you find just the right paper for your project. Please call our sales team for information on the types, sizes and colors of paper available for your printing needs.
@@ -179,7 +176,7 @@ Is there a minimum order quantity?
 Some products have a minimum quantity for cost‑effective printing, while others can be printed in very small numbers. The chatbot will tell you the minimums for each item.
 
 Do you offer discounts for bulk orders?
-Yes, larger quantities usually qualify for better per‑piece pricing. The chatbot can show you how the price changes as you increase the quantity.
+Yes, larger quantities usually qualify for better per‑piece pricing.
 
 Do you offer delivery or only pickup?
 Depending on location, we may offer both delivery and pickup options. The chatbot can tell you what is available in your area and if any delivery charges apply.

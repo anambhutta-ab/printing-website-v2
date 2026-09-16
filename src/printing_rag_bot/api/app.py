@@ -39,7 +39,7 @@ class ChatResponse(BaseModel):
 rag_pipeline = RAGPipeline(
     persist_directory=Path("data/vectorstore"),
     collection_name="printing_rag",
-    model_name="llama-3.1-8b-instant",
+    model_name="openai/gpt-oss-120b",
 )
 
 
@@ -81,3 +81,5 @@ def chat(request: ChatRequest):
             status_code=500,
             detail=str(error),
         )
+
+    

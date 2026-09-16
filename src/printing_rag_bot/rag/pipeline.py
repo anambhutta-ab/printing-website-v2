@@ -25,7 +25,7 @@ class RAGPipeline:
         self,
         persist_directory: str | Path = "data/vectorstore",
         collection_name: str = "printing_rag",
-        model_name: str = "llama-3.1-8b-instant",
+        model_name: str = "openai/gpt-oss-120b",
     ) -> None:
         self.vector_store_manager = VectorStoreManager(
             persist_directory=persist_directory,
