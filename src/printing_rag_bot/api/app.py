@@ -10,15 +10,6 @@ from printing_rag_bot.rag.pipeline import RAGPipeline
 
 app = FastAPI(title="Printing RAG API")
 
-import shutil
-from pathlib import Path
-
-# Delete old vectorstore on startup (force rebuild)
-vectorstore_path = Path("data/vectorstore")
-if vectorstore_path.exists():
-    shutil.rmtree(vectorstore_path)
-    print("Deleted old vectorstore, will rebuild...")
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

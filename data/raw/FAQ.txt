@@ -97,9 +97,6 @@ RGB - Red, Green, and Blue are "additive colors". If we combine red, green and b
 
 CMYK - Cyan, Magenta and Yellow are "subtractive colors". If we print cyan, magenta and yellow inks on white paper, they absorb the light shining on the page. Since our eyes receive no reflected light from the paper, we perceive black... in a perfect world! The printing world operates in subtractive color, or CMYK mode. In practice, printing subtractive inks may contain impurities that prevent them from absorbing light perfectly. They do a pretty good job with light colors, but when we add them all together, they produce a murky brown rather than black. In order to get decent dark colors, black ink is added in increasing proportions, as the color gets darker and darker. This is the "K" component in CMYK printing. "K" is used to indicate black instead of a "B" to avoid possible confusion over Blue ink.
 
-Always deliver your digital images in CMYK-mode!
-One of the most common errors made by inexperienced graphic designers is submitting RGB files. As a result we must ask if they would like us to convert to CMYK before we send the files for film output. Most of the time, the color change that will occur is slight. However, every once in a while, the color range after conversion is compressed during the transition to CMYK mode resulting in a complete change in color tones. Be warned that there is absolutely no way to get that deep RGB blue using CMYK, no matter how much we want to.
-
 What kinds of printing services do you offer?
 A: We offer a wide range of printing services including business cards, flyers, brochures, banners, posters, stickers, letterheads, envelopes, booklets, and custom packaging. The chatbot can help you choose the right option for your needs.
 
@@ -190,3 +187,43 @@ Store printed items in a cool, dry place away from direct sunlight and moisture.
 I don’t know the exact terms for what I need. Can the chatbot still help?
 Absolutely. You can describe your need in simple language, like “I need cards to give to customers” or “I need a big sign for my shop front.” The chatbot will ask a few easy questions and suggest suitable products, sizes, and materials.
 
+our graphic designer can assist you in creating your design. For design related queries contact our graphic designer at (+92)-300-8446614
+
+Communicare deals in Designing, Printing and packaging
+
+Designing is a delicate job. The fragility of ideas needs extra care. We have a team of dedicated designers, who can translate imagination into reality. 
+We can provide designing facilities for: 
+- Service Campaign 
+- Product Campaign 
+- posters
+- Photography
+- logo 
+- Stationery
+- brochures
+- Catalogue 
+- Banners
+- truevision
+- hoarding
+- Billboard
+- flex
+- visiting cards
+- letterheads
+
+We excel in quality printing. We are different in many ways. With us quality printing is always within your access. 
+Our printing is exceptional as we execute a wide range of printing jobs including:
+- giant size poster 
+- greeting cards
+- pamphlet
+- office Stationery
+- calendars
+- catalogues
+- diary
+- brochures
+- flyers
+- post cards
+
+We have a number of printing machines in various sizes that cope with the up to date needs of quality printing of our esteemed clients. our setup is shown on About Page of our website as well. 
+- Rota Printing machines
+- Die Cutting
+- Binding Section
+- Packaging section 
