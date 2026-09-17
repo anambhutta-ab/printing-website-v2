@@ -117,9 +117,9 @@ Run the backend:
 uvicorn printing_rag_bot.api.app:app
 ```
 
-The local Qdrant store uses an on-disk lock, so run only one backend process
-when using the local store. For multiple workers or deployments, use a Qdrant
-server or Qdrant Cloud and configure the client accordingly.
+The backend uses Qdrant Cloud. Set `QDRANT_URL` and `QDRANT_API_KEY` in the
+deployment environment before starting the API. Build the collection once
+against Qdrant Cloud before serving queries.
 
 The API will be available at:
 
@@ -160,6 +160,9 @@ npm run preview
 | Variable | Description |
 |---|---|
 | `GROQ_API_KEY` | Your Groq API key for the LLM |
+| `GOOGLE_API_KEY` | Google API key used for document and query embeddings |
+| `QDRANT_URL` | Qdrant Cloud cluster URL |
+| `QDRANT_API_KEY` | Qdrant Cloud API key |
 
 ### Frontend `.env`
 

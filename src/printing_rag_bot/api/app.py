@@ -1,8 +1,3 @@
-#  fromproject root:  D:\Projects\Printing RAG LLM
-# uvicorn src.printing_rag_bot.api.app:app --reload
-
-
-from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -37,7 +32,6 @@ class ChatResponse(BaseModel):
 
 
 rag_pipeline = RAGPipeline(
-    persist_directory=Path("data/vectorstore"),
     collection_name="printing_rag",
     model_name="openai/gpt-oss-120b",
 )

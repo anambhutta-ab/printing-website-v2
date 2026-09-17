@@ -1,9 +1,12 @@
-from pathlib import Path
+import os
 from typing import Optional
 
+from dotenv import load_dotenv
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, VectorParams
 
 from printing_rag_bot.config import settings
 from .index import build_text_corpus
@@ -11,16 +14,29 @@ from .index import build_text_corpus
 # Standard Google AI Studio stable text embedding model
 DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
 
+load_dotenv()
+
 class VectorStoreManager:
     def __init__(
         self,
-        persist_directory: str | Path = "data/vectorstore",
         collection_name: str = "printing_rag",
         embedding_model_name: str = DEFAULT_EMBEDDING_MODEL,
         embeddings: Optional[GoogleGenerativeAIEmbeddings] = None,
-        ) -> None:
-        self.persist_directory = str(persist_directory)
+    ) -> None:
         self.collection_name = collection_name
+
+        qdrant_url = os.getenv("QDRANT_URL", "").strip()
+        qdrant_api_key = os.getenv("QDRANT_API_KEY", "").strip()
+        if not qdrant_url or not qdrant_api_key:
+            raise ValueError(
+                "QDRANT_URL and QDRANT_API_KEY must be set for Qdrant Cloud."
+            )
+
+        self.client = QdrantClient(
+            url=qdrant_url,
+            api_key=qdrant_api_key,
+            prefer_grpc=True,
+        )
 
         if embeddings is None:
             google_api_key = getattr(settings, "google_api_key", "").strip()
@@ -44,20 +60,32 @@ class VectorStoreManager:
         if not documents:
             raise ValueError("No documents provided to build vector store")
 
-        vectorstore = QdrantVectorStore.from_documents(
-            documents=documents,
-            embedding=self.embeddings,
+        if self.client.collection_exists(self.collection_name):
+            self.client.delete_collection(self.collection_name)
+
+        embedding_size = len(self.embeddings.embed_documents(["dummy_text"])[0])
+        self.client.create_collection(
             collection_name=self.collection_name,
-            path=self.persist_directory,
+            vectors_config=VectorParams(
+                size=embedding_size,
+                distance=Distance.COSINE,
+            ),
         )
+
+        vectorstore = QdrantVectorStore(
+            client=self.client,
+            collection_name=self.collection_name,
+            embedding=self.embeddings,
+        )
+        vectorstore.add_documents(documents)
         self._vectorstore = vectorstore
         return vectorstore
 
     def load_existing(self) -> QdrantVectorStore:
-        vectorstore = QdrantVectorStore.from_existing_collection(
+        vectorstore = QdrantVectorStore(
+            client=self.client,
             collection_name=self.collection_name,
             embedding=self.embeddings,
-            path=self.persist_directory,
         )
         self._vectorstore = vectorstore
         return vectorstore
@@ -73,13 +101,11 @@ class VectorStoreManager:
 
 
 def build_and_store_vectorstore(
-    data_dir: str | Path,
-    persist_directory: str | Path = "data/vectorstore",
+    data_dir: str,
     collection_name: str = "printing_rag",
 ) -> QdrantVectorStore:
     corpus = build_text_corpus(data_dir)
     manager = VectorStoreManager(
-        persist_directory=persist_directory,
         collection_name=collection_name,
     )
     return manager.build_from_documents(corpus)

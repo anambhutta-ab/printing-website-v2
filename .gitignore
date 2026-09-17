@@ -25,7 +25,6 @@ dist/
 *.egg-info/
 
 # Local/generated RAG data
-data/vectorstore/
 data/uploads/
 
 # Frontend generated files and local environment files

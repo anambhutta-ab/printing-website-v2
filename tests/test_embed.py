@@ -16,7 +16,6 @@ def run_test():
     # 1. Initialize Vector Store Manager
     try:
         manager = VectorStoreManager(
-            persist_directory="data/test_vectorstore",
             collection_name="test_collection"
         )
         print("✓ VectorStoreManager initialized successfully.")

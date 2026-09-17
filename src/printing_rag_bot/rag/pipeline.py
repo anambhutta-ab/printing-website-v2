@@ -23,12 +23,10 @@ class RAGResult:
 class RAGPipeline:
     def __init__(
         self,
-        persist_directory: str | Path = "data/vectorstore",
         collection_name: str = "printing_rag",
         model_name: str = "openai/gpt-oss-120b",
     ) -> None:
         self.vector_store_manager = VectorStoreManager(
-            persist_directory=persist_directory,
             collection_name=collection_name,
         )
         self.llm_service = GroqLLMService(model_name=model_name)
