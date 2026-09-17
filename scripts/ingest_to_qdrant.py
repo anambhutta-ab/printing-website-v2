@@ -1,12 +1,8 @@
 """Ingest uploaded PDF and text files into Qdrant Cloud.
 
 Run from the repository root after setting QDRANT_URL and QDRANT_API_KEY.
-The default embedding provider matches the existing chatbot collection:
+The embedding provider matches the existing chatbot collection:
     python scripts/ingest_to_qdrant.py
-
-To use Sentence Transformers instead, set:
-    EMBEDDING_PROVIDER=sentence-transformers
-    SENTENCE_TRANSFORMER_MODEL=all-MiniLM-L6-v2
 """
 
 from __future__ import annotations
@@ -15,7 +11,7 @@ import os
 import sys
 import uuid
 from pathlib import Path
-from typing import Any, Protocol
+from typing import Protocol
 
 from dotenv import load_dotenv
 from langchain_core.documents import Document
@@ -25,37 +21,16 @@ from pypdf import PdfReader
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 
-try:
-    from sentence_transformers import SentenceTransformer
-except ImportError:  # Optional unless EMBEDDING_PROVIDER is sentence-transformers.
-    SentenceTransformer = None
-
-
 UPLOADS_DIR = Path("data/raw/")
 COLLECTION_NAME = "printing_rag"
 BATCH_SIZE = 100
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 DEFAULT_GOOGLE_EMBEDDING_MODEL = "gemini-embedding-001"
-DEFAULT_SENTENCE_TRANSFORMER_MODEL = "all-MiniLM-L6-v2"
 
 
 class EmbeddingProvider(Protocol):
     def embed_documents(self, texts: list[str]) -> list[list[float]]: ...
-
-
-class SentenceTransformerEmbeddings:
-    def __init__(self, model_name: str) -> None:
-        if SentenceTransformer is None:
-            raise RuntimeError(
-                "sentence-transformers is required for EMBEDDING_PROVIDER="
-                "sentence-transformers. Install it with: pip install sentence-transformers"
-            )
-        self.model = SentenceTransformer(model_name)
-
-    def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        vectors = self.model.encode(texts, normalize_embeddings=True)
-        return vectors.tolist()
 
 
 def required_environment_variable(name: str) -> str:
@@ -95,19 +70,6 @@ def load_documents() -> list[Document]:
 
 
 def create_embeddings() -> EmbeddingProvider:
-    provider = os.getenv("EMBEDDING_PROVIDER", "google").strip().lower()
-    if provider == "sentence-transformers":
-        model_name = os.getenv(
-            "SENTENCE_TRANSFORMER_MODEL", DEFAULT_SENTENCE_TRANSFORMER_MODEL
-        )
-        print(f"Using Sentence Transformers model '{model_name}'...")
-        return SentenceTransformerEmbeddings(model_name)
-
-    if provider != "google":
-        raise ValueError(
-            "EMBEDDING_PROVIDER must be 'google' or 'sentence-transformers'."
-        )
-
     google_api_key = required_environment_variable("GOOGLE_API_KEY")
     model_name = os.getenv(
         "GOOGLE_EMBEDDING_MODEL", DEFAULT_GOOGLE_EMBEDDING_MODEL

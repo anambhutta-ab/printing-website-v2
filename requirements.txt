@@ -7,9 +7,7 @@ langchain-groq
 langchain-text-splitters
 langchain-google-genai
 langchain-qdrant
-chromadb
 pypdf
-sentence-transformers
 python-dotenv
 pydantic
 pydantic-settings

@@ -124,8 +124,12 @@ against Qdrant Cloud before serving queries.
 To migrate an existing local Chroma collection to Qdrant Cloud, run:
 
 ```bash
+pip install chromadb
 python migrate_chroma_to_qdrant.py
 ```
+
+ChromaDB is only required for this one-time local migration and is intentionally
+excluded from the production deployment dependencies.
 
 The API will be available at:
 
