@@ -121,6 +121,12 @@ The backend uses Qdrant Cloud. Set `QDRANT_URL` and `QDRANT_API_KEY` in the
 deployment environment before starting the API. Build the collection once
 against Qdrant Cloud before serving queries.
 
+To migrate an existing local Chroma collection to Qdrant Cloud, run:
+
+```bash
+python migrate_chroma_to_qdrant.py
+```
+
 The API will be available at:
 
 ```text
