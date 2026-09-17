@@ -9,11 +9,11 @@ dependencies = [
   "uvicorn[standard]",
   "langchain",
   "langchain-community",
-  "chromadb",
   "pydantic>=2.0",
   "python-dotenv",
-  "langchain-chroma",
   "langchain-google-genai",
+  "langchain-qdrant",
+  "qdrant-client>=1.9.0",
   "langchain-groq",
   "groq",
 ]

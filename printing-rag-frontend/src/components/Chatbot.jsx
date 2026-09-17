@@ -351,7 +351,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   td: ({ children }) => (
-                    <td className="min-w-[120px] px-3 py-3 leading-5 text-brand-muted">
+                    <td className="min-w-[120px] px-3 py-3 leading-5 text-brand-navy">
                       {children}
                     </td>
                   ),

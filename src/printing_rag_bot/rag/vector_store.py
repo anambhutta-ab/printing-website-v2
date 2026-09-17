@@ -1,9 +1,9 @@
 from pathlib import Path
 from typing import Optional
 
-from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_qdrant import QdrantVectorStore
 
 from printing_rag_bot.config import settings
 from .index import build_text_corpus
@@ -22,43 +22,47 @@ class VectorStoreManager:
         self.persist_directory = str(persist_directory)
         self.collection_name = collection_name
 
-        google_api_key = getattr(settings, "google_api_key", "").strip()
-        if not google_api_key or google_api_key.lower() == "dummy":
-            raise ValueError(
-                "GOOGLE_API_KEY is missing, empty, or set to 'dummy'. "
-                "Please set a valid Gemini API key in your .env or environment variables."
+        if embeddings is None:
+            google_api_key = getattr(settings, "google_api_key", "").strip()
+            if not google_api_key or google_api_key.lower() == "dummy":
+                raise ValueError(
+                    "GOOGLE_API_KEY is missing, empty, or set to 'dummy'. "
+                    "Please set a valid Gemini API key in your .env or environment variables."
+                )
+
+            embeddings = GoogleGenerativeAIEmbeddings(
+                model=embedding_model_name,
+                google_api_key=google_api_key,
+                task_type="retrieval_document",
+                output_dimensionality=768,
             )
 
-        self.embeddings = embeddings or GoogleGenerativeAIEmbeddings(
-                    model=embedding_model_name,
-                    google_api_key=google_api_key,
-                    task_type="retrieval_document",  # ← you already added this
-                    output_dimensionality=768,  # ← you already added this
-                )
-        self._vectorstore: Optional[Chroma] = None 
-    def build_from_documents(self, documents: list[Document]) -> Chroma:
+        self.embeddings = embeddings
+        self._vectorstore: Optional[QdrantVectorStore] = None
+
+    def build_from_documents(self, documents: list[Document]) -> QdrantVectorStore:
         if not documents:
             raise ValueError("No documents provided to build vector store")
 
-        vectorstore = Chroma.from_documents(
+        vectorstore = QdrantVectorStore.from_documents(
             documents=documents,
             embedding=self.embeddings,
             collection_name=self.collection_name,
-            persist_directory=self.persist_directory,
+            path=self.persist_directory,
         )
         self._vectorstore = vectorstore
         return vectorstore
 
-    def load_existing(self) -> Chroma:
-        vectorstore = Chroma(
+    def load_existing(self) -> QdrantVectorStore:
+        vectorstore = QdrantVectorStore.from_existing_collection(
             collection_name=self.collection_name,
-            persist_directory=self.persist_directory,
-            embedding_function=self.embeddings,
+            embedding=self.embeddings,
+            path=self.persist_directory,
         )
         self._vectorstore = vectorstore
         return vectorstore
 
-    def get_vectorstore(self) -> Chroma:
+    def get_vectorstore(self) -> QdrantVectorStore:
         if self._vectorstore is not None:
             return self._vectorstore
         return self.load_existing()
@@ -72,7 +76,7 @@ def build_and_store_vectorstore(
     data_dir: str | Path,
     persist_directory: str | Path = "data/vectorstore",
     collection_name: str = "printing_rag",
-) -> Chroma:
+) -> QdrantVectorStore:
     corpus = build_text_corpus(data_dir)
     manager = VectorStoreManager(
         persist_directory=persist_directory,

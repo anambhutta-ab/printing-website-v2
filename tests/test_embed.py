@@ -34,14 +34,14 @@ def run_test():
         print(f"✗ Embed query failed: {e}")
         return
 
-    # 3. Test document ingestion & Chroma vectorstore build
+    # 3. Test document ingestion & Qdrant vector store build
     try:
         dummy_docs = [
             Document(page_content="Printing machines use ink rollers.", metadata={"id": 1}),
             Document(page_content="RAG pipelines index text for semantic similarity search.", metadata={"id": 2}),
         ]
         vectorstore = manager.build_from_documents(dummy_docs)
-        print("✓ Chroma vector store created and saved successfully.")
+        print("✓ Qdrant vector store created and saved successfully.")
 
         # 4. Test similarity search
         results = manager.similarity_search("How do printing machines work?", k=1)
@@ -49,7 +49,7 @@ def run_test():
         print(f"  Most relevant document: '{results[0].page_content}'")
 
     except Exception as e:
-        print(f"✗ Chroma indexing/search failed: {e}")
+        print(f"✗ Qdrant indexing/search failed: {e}")
 
 if __name__ == "__main__":
     run_test()

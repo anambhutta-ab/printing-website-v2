@@ -7,7 +7,7 @@ A demo AI-powered printing consultation assistant that answers questions about p
 This project demonstrates a full-stack RAG application for a printing business. It combines:
 
 - A React + Vite + Tailwind CSS frontend with a responsive, branded chatbot UI.
-- A FastAPI backend that serves a RAG pipeline using LangChain, ChromaDB, and Groq.
+- A FastAPI backend that serves a RAG pipeline using LangChain, Qdrant, and Groq.
 - A chat interface that shows answers, sources, and example questions.
 
 The assistant is designed as a portfolio/demo project. All business details, inventory, and contact information are placeholders.
@@ -37,7 +37,7 @@ The assistant is designed as a portfolio/demo project. All business details, inv
 - FastAPI
 - Uvicorn
 - LangChain
-- ChromaDB
+- Qdrant
 - Groq (LLM provider)
 - `python-dotenv` for environment variables
 
@@ -52,7 +52,7 @@ printing-rag-assistant/
 │     ├─ data/
 │     │  └─ ...             # Knowledge base documents
 │     └─ rag/
-│        ├─ chroma_db.py     # ChromaDB vector store
+│        ├─ vector_store.py   # Qdrant vector store
 │        ├─ ingest.py        # Document ingestion script
 │        └─ rag_chain.py     # LangChain RAG chain
 ├─ printing-rag-frontend/
@@ -107,14 +107,19 @@ GROQ_API_KEY=your_groq_api_key_here
 Ingest your knowledge base:
 
 ```bash
-python -m src.printing_rag_bot.rag.ingest
+set PYTHONPATH=src
+python scripts/build_vectorstore.py
 ```
 
 Run the backend:
 
 ```bash
-uvicorn src.printing_rag_bot.api.app:app --reload
+uvicorn printing_rag_bot.api.app:app
 ```
+
+The local Qdrant store uses an on-disk lock, so run only one backend process
+when using the local store. For multiple workers or deployments, use a Qdrant
+server or Qdrant Cloud and configure the client accordingly.
 
 The API will be available at:
 

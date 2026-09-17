@@ -5,10 +5,10 @@ langchain-core
 langchain-community
 langchain-groq
 langchain-text-splitters
-langchain-chroma
 langchain-google-genai
-chromadb
+langchain-qdrant
 python-dotenv
 pydantic
 pydantic-settings
 groq
+qdrant-client>=1.9.0
