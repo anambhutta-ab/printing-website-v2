@@ -111,6 +111,11 @@ set PYTHONPATH=src
 python scripts/build_vectorstore.py
 ```
 
+The pipeline uses only `data/raw/printing_consultant_knowledgebase.txt`.
+Other files in `data/raw` are ignored. To rebuild the Qdrant Cloud collection,
+run `python scripts/ingest_to_qdrant.py` after setting the required environment
+variables.
+
 Run the backend:
 
 ```bash

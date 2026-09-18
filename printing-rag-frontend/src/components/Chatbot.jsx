@@ -281,7 +281,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   strong: ({ children }) => (
-                    <strong className="font-bold text-brand-primary">
+                    <strong className="font-bold text-brand-secondary">
                       {children}
                     </strong>
                   ),
@@ -303,19 +303,19 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                   ),
 
                   h1: ({ children }) => (
-                    <h1 className="mb-3 mt-4 text-xl font-bold text-brand-text">
+                    <h1 className="mb-3 mt-4 text-xl font-bold text-brand-surface">
                       {children}
                     </h1>
                   ),
 
                   h2: ({ children }) => (
-                    <h2 className="mb-3 mt-4 text-lg font-bold text-brand-text">
+                    <h2 className="mb-3 mt-4 text-lg font-bold text-brand-surface">
                       {children}
                     </h2>
                   ),
 
                   h3: ({ children }) => (
-                    <h3 className="mb-2 mt-3 font-bold text-brand-text">
+                    <h3 className="mb-2 mt-3 font-bold text-brand-surface">
                       {children}
                     </h3>
                   ),
@@ -372,7 +372,7 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                 <button
                   type="button"
                   onClick={() => toggleSources(message.id)}
-                  className="flex items-center gap-2 text-xs font-semibold text-brand-navy transition 
+                  className="flex items-center gap-2 text-xs font-semibold text-brand-primary transition 
                   hover:text-brand-primary"
                   aria-expanded={expandedSourceMessageIds.includes(message.id)}
                 >
@@ -395,11 +395,11 @@ function Chatbot({ isOpen, onOpen, onMinimize }) {
                         key={`${message.id}-${source.source}-${index}`}
                         className="rounded-lg border border-brand-border bg-brand-surface p-3 text-xs text-brand-muted"
                       >
-                        <p className="font-semibold text-brand-text">
+                        <p className="font-semibold text-brand-primary">
                           {source.source}
                         </p>
 
-                        <p className="mt-1 leading-5 text-brand-muted">
+                        <p className="mt-1 leading-5 text-slate-600">
                           {source.snippet}
                         </p>
                       </article>

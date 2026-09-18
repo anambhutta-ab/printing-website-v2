@@ -1,0 +1,406 @@
+PRINTING CONSULTANT WEBSITE
+COMPLETE RAG KNOWLEDGE BASE
+
+CHATBOT OPERATING RULES
+
+The chatbot must provide helpful, simple explanations about printing products, materials, design preparation, finishing, binding, packaging, and the order process.
+
+The chatbot must never estimate, calculate, invent, compare, or promise a price.
+
+The chatbot must never give a price range, discount amount, delivery charge, production date, guaranteed turnaround time, minimum order quantity, stock availability, or installation commitment.
+
+For all quote-related questions, including price, quantity, custom size, materials, finishing, delivery, urgent work, availability, and production time, direct the customer to the Get a Quote form on the website.
+
+The chatbot should encourage customers to include product type, size, quantity, intended use, material preference if known, finishing, artwork status, location, and required date in their Get a Quote request.
+
+The chatbot should not claim that a product, material, finish, sample, proof, delivery option, or service is available unless it is confirmed by the business through the Get a Quote process.
+
+When a customer does not know printing terminology, the chatbot should ask them to describe what they need in plain language and guide them to the Get a Quote form.
+
+GENERAL PRINTING SERVICES
+
+Q: What services do you provide?
+A: We provide designing, printing, finishing, binding, and packaging services. Our work includes business stationery, marketing materials, brochures, catalogues, posters, banners, large-format displays, and custom packaging.
+
+Q: What types of printing products do you offer?
+A: Our printing services include visiting cards, letterheads, customized envelopes, flyers, pamphlets, brochures, catalogues, calendars, diaries, greeting cards, postcards, posters, giant-size posters, banners, flex, hoardings, billboards, office stationery, binding, lamination, and packaging.
+
+Q: Do you provide both design and printing?
+A: Yes. You may provide print-ready artwork or request design support for your project. Use the Get a Quote form to explain what you need and whether you require design assistance.
+
+Q: I am new to printing. How do I start?
+A: Start by describing the final item you need. For example, you may need cards for customers, flyers for an event, a brochure for services, or a large sign for a shop. Use the Get a Quote form and include your purpose, approximate quantity, desired size, and required date.
+
+Q: I do not know the correct printing terms. Can you still help?
+A: Yes. Describe your need in everyday language. For example, you can say “I need a big outdoor sign,” “I need a booklet to show my products,” or “I need official company paper.” Use the Get a Quote form to share your requirements.
+
+Q: Can you handle small and large print orders?
+A: Order options depend on the specific product, material, size, finishing, and production requirements. Use the Get a Quote form to share your quantity and receive confirmation from the team.
+
+GET A QUOTE
+
+Q: How do I get a quote?
+A: Please use the Get a Quote form on the website. Include the product type, quantity, size, intended use, material preference if known, finishing requirements, artwork status, location, and required date.
+
+Q: Can the chatbot tell me the price?
+A: No. Each printing job has different requirements, so please use the Get a Quote form for an accurate quotation.
+
+Q: Why is printing price different for each order?
+A: Printing requirements vary by quantity, size, paper or material, colour, finishing, binding, packaging, artwork condition, and production requirements. Submit your details through the Get a Quote form for a formal quotation.
+
+Q: Do bulk orders receive discounts?
+A: Quantity options and any applicable pricing are confirmed based on the full job specification. Please use the Get a Quote form to request a formal quotation.
+
+Q: Can I order a custom size?
+A: Custom sizes may be possible depending on the product and material. Enter the required width and height in the Get a Quote form so the team can confirm your request.
+
+Q: Can I request urgent printing?
+A: Urgent work depends on the product, quantity, artwork readiness, finishing, and current production workload. Submit your required date through the Get a Quote form for confirmation.
+
+Q: What information should I include in a quote request?
+A: Include what you want to print, its purpose, quantity, size, paper or material preference if known, one-sided or double-sided printing if relevant, finishing requirements, artwork status, location, and required date.
+
+DESIGN SERVICES
+
+Q: What design services are available?
+A: Design support is available for service campaigns, product campaigns, posters, photography-based designs, logos, stationery, brochures, catalogues, banners, Truevision displays, hoardings, billboards, flex, visiting cards, letterheads, and customized envelopes.
+
+Q: What is service campaign design?
+A: Service campaign design promotes a service rather than a physical product. It can be used for businesses such as salons, restaurants, clinics, training centres, repair services, or professional services.
+
+Q: What is product campaign design?
+A: Product campaign design promotes a product, product range, launch, seasonal offer, or retail sale. It may include flyers, catalogues, posters, banners, packaging, labels, and display materials.
+
+Q: Can you help with logo design?
+A: Design assistance can be requested for a logo and related branding materials. Use the Get a Quote form and describe your business, preferred style, colours, and where the logo will be used.
+
+Q: Can you design business stationery?
+A: Design support can be requested for visiting cards, letterheads, envelopes, notepads, folders, invoice books, receipt books, and other business stationery.
+
+Q: Can you design brochures and catalogues?
+A: Yes. You can request design support for brochures and catalogues. In your Get a Quote request, include your company details, product or service content, images, logo, preferred style, and approximate number of pages.
+
+Q: Can you design a banner or shop sign?
+A: Design support can be requested for banners, flex, hoardings, billboards, Truevision displays, and other large-format promotional materials. Include the installation location, intended size, and whether the display is indoor or outdoor.
+
+VISITING CARDS AND BUSINESS STATIONERY
+
+Q: What are visiting cards?
+A: Visiting cards, also called business cards, are small cards used to share your name, company name, job role, phone number, email address, logo, and other important contact details.
+
+Q: What should be included on a visiting card?
+A: A visiting card usually includes your name, business name, role, phone number, email address, logo, and website or social-media details if relevant. A QR code can also link to a website, location, portfolio, or messaging page.
+
+Q: What are letterheads?
+A: Letterheads are branded sheets used for official letters, quotations, invoices, certificates, and other business communication. They commonly include the company logo and contact information.
+
+Q: What is office stationery?
+A: Office stationery includes printed items used in daily business work, such as letterheads, envelopes, notepads, folders, invoice books, receipt books, and visiting cards.
+
+Q: Can I print customized envelopes?
+A: Yes. Customized envelopes can include a logo, company name, return address, brand colours, and an official or promotional design.
+
+Q: What material is suitable for visiting cards?
+A: Visiting cards are commonly printed on thicker paper or card stock so they feel strong and professional. Suitable paper and finishing options depend on your design and intended use, so request confirmation through the Get a Quote form.
+
+FLYERS, PAMPHLETS, BROCHURES, AND CATALOGUES
+
+Q: What is a flyer?
+A: A flyer is usually a single printed sheet that shares a quick message. It is useful for promotions, discounts, events, product launches, announcements, and business introductions.
+
+Q: What is a pamphlet?
+A: A pamphlet is a small printed information piece, often folded, that explains a topic, product, service, campaign, or offer in more detail than a simple flyer.
+
+Q: What is a brochure?
+A: A brochure is a printed marketing piece that introduces a business, service, offer, or product range. It may be a folded sheet or a multi-page booklet.
+
+Q: What is the difference between a flyer and a brochure?
+A: A flyer usually has a short message on one sheet. A brochure provides more detailed information and can use folds or multiple pages.
+
+Q: What is a catalogue?
+A: A catalogue is a printed book or booklet that displays a collection of products or services. It can include images, product descriptions, codes, specifications, and other sales information.
+
+Q: What is the difference between a brochure and a catalogue?
+A: A brochure usually gives an overview of a business, service, or offer. A catalogue is more detailed and is commonly used to show a larger product or service range.
+
+Q: What is a booklet?
+A: A booklet is a small bound or stapled publication with multiple pages. It can be used for company profiles, product information, manuals, reports, menus, event programmes, and catalogues.
+
+Q: Can brochures and catalogues be printed in custom sizes?
+A: Custom sizes may be possible depending on the design, page count, paper, binding, and finishing requirements. Use the Get a Quote form to submit your preferred dimensions.
+
+POSTERS, BANNERS, AND LARGE-FORMAT PRINTING
+
+Q: What is a poster?
+A: A poster is a printed visual display used for promotions, events, awareness campaigns, menus, announcements, offers, and shop displays.
+
+Q: What is a giant-size poster?
+A: A giant-size poster is an oversized visual display intended to be seen from a greater distance. It is useful for storefronts, exhibitions, events, public spaces, and promotional displays.
+
+Q: What is large-format printing?
+A: Large-format printing creates bigger visual materials designed for viewing from a distance. It is commonly used for posters, banners, flex, shop signage, hoardings, billboards, and exhibition displays.
+
+Q: What is banner printing?
+A: Banner printing creates large promotional displays for shops, events, exhibitions, stalls, launches, and announcements. The suitable material depends on where and how the banner will be used.
+
+Q: What is flex printing?
+A: Flex is a commonly used printable material for banners, shop signs, promotions, and outdoor displays. It is often used for large visual advertising.
+
+Q: What is a hoarding?
+A: A hoarding is a large printed display or board used around construction sites, property projects, shops, events, or public-facing locations. It can be used for branding, advertising, project information, or privacy.
+
+Q: What is a billboard?
+A: A billboard is a very large outdoor advertisement designed to be noticed from a distance. It is often placed near roads, buildings, or high-traffic locations.
+
+Q: What is Truevision printing?
+A: Truevision commonly refers to illuminated or backlit signage and display material. It is used when graphics need to be visible in light boxes, retail displays, indoor signs, or at night.
+
+Q: Which material should I use for an outdoor banner?
+A: The suitable material depends on weather exposure, display duration, mounting method, location, and expected viewing distance. Submit these details in the Get a Quote form for confirmation.
+
+Q: How do I choose the right banner or poster size?
+A: Think about where the display will be placed and how far away people will be when viewing it. Larger spaces and longer viewing distances need larger text and visuals. Include the display location and approximate viewing distance in your quote request.
+
+Q: Can you print shop-front signage?
+A: Shop signage may use banners, flex, Truevision, hoardings, or other large-format materials. Use the Get a Quote form with your intended dimensions, location, and indoor or outdoor requirement.
+
+GREETING CARDS, POSTCARDS, CALENDARS, AND DIARIES
+
+Q: What are greeting cards?
+A: Greeting cards are printed cards used for occasions such as Eid, birthdays, weddings, invitations, thank-you messages, corporate greetings, and special events.
+
+Q: What are postcards?
+A: Postcards are compact printed cards used for invitations, promotions, direct mail, announcements, travel themes, and customer messages.
+
+Q: Can calendars be customized for a business?
+A: Calendars can be customized with branding, logos, contact details, images, monthly dates, and promotional information. Submit your requirements through the Get a Quote form.
+
+Q: Can diaries be customized?
+A: Diaries can be customized with branded covers, company logos, business information, planning pages, and other requested design elements. Use the Get a Quote form to describe your requirements.
+
+PHOTOGRAPHY AND LOGO PRINTING
+
+Q: Can photographs be printed?
+A: Photos can be printed for posters, cards, photo displays, promotional materials, catalogues, and other products. Use the highest-quality original image available for better print clarity.
+
+Q: Can I use images from the internet in my design?
+A: Many internet images are low resolution and may appear blurry or pixelated in print, especially when enlarged. Use original, high-quality images or properly licensed design assets.
+
+Q: Can I print my logo?
+A: Yes. Logos can be used on stationery, visiting cards, brochures, catalogues, packaging, labels, banners, and other promotional materials.
+
+Q: What logo file is best for printing?
+A: Vector files are usually best for logos because they can be enlarged without becoming blurry. Common vector file types include AI, EPS, SVG, and high-quality PDF files.
+
+Q: Why does image quality matter in printing?
+A: Low-quality images can look soft, pixelated, or blocky when printed. This becomes more noticeable when an image is enlarged for posters, banners, or large-format displays.
+
+FILE SUBMISSION AND ARTWORK PREPARATION
+
+Q: What file format should I submit for printing?
+A: PDF is generally the preferred format because it helps preserve fonts, layout, and graphics. JPEG and PNG files may also be suitable for some print jobs, depending on their quality and intended use.
+
+Q: Why is PDF preferred for printing?
+A: A properly exported PDF usually keeps text, images, layout, and fonts together in one file. This helps reduce unexpected changes during print preparation.
+
+Q: Can I submit an editable design file?
+A: Editable files may be accepted depending on the software and project requirements. PDF is preferred where possible. If you submit an editable file, include linked images, fonts where permitted, and any required supporting files.
+
+Q: What is a print-ready PDF?
+A: A print-ready PDF is a final file prepared for production. It should have the correct size, clear images, correct text, and any necessary print settings.
+
+Q: How do I make a PDF file?
+A: Most design programs have a Save As, Export, or Download option that lets you create a PDF. If you are unsure how to prepare a file, request design assistance through the Get a Quote form.
+
+Q: What is DPI?
+A: DPI means dots per inch. It describes the level of image detail available for printing. Images with more appropriate detail generally produce sharper results.
+
+Q: What image resolution is recommended for printing?
+A: For many standard print products, artwork prepared at around 300 DPI at its final printed size is generally suitable. Large-format printing may have different artwork requirements because it is often viewed from farther away.
+
+Q: Why do internet images or screenshots print blurry?
+A: Website images and screenshots are often low resolution. When enlarged for printing, they may look pixelated, soft, or blocky.
+
+Q: Can I use a screenshot in my design?
+A: Screenshots are often not suitable for professional printing, especially for posters, banners, and large-format products. Use the original image file where possible.
+
+Q: Can you check whether my artwork is suitable?
+A: Artwork can be reviewed as part of the project process. Submit your file and printing requirements through the Get a Quote form or the website’s available file-submission method.
+
+Q: Should I compress large files before uploading or sending them?
+A: Compressing large design folders can make them easier to upload or send. If you are sending editable artwork, include the source file and all required linked assets.
+
+Q: What should I include with an editable design file?
+A: Include the source file, linked images, used fonts where permitted, and any special production instructions. A final PDF is recommended as a visual reference.
+
+COLOUR AND PRINT QUALITY
+
+Q: Why do printed colours look different from colours on my screen?
+A: Screens create colour with light, while printers create colour with ink on paper or another material. Because these systems work differently, the printed result may not look exactly the same as it appears on screen.
+
+Q: What is RGB?
+A: RGB stands for red, green, and blue. It is the colour system used by screens such as phones, monitors, televisions, and digital displays.
+
+Q: What is CMYK?
+A: CMYK stands for cyan, magenta, yellow, and black. It is the colour system commonly used for full-colour printing.
+
+Q: Should I use RGB or CMYK for printing?
+A: CMYK is generally more suitable for print-focused artwork because it reflects how printing inks work. However, final colour appearance can still vary by material, ink, finish, lighting, and production process.
+
+Q: Will the printed colours exactly match my screen?
+A: Exact matching is not always possible because screen brightness, device settings, paper or material, ink, finishing, and lighting can affect colour appearance.
+
+Q: What should I do if colour is very important for my project?
+A: Mention that colour is critical in your Get a Quote request. Allow time for proof review and possible artwork adjustments before final production.
+
+Q: What is a proof?
+A: A proof is a preview or sample of artwork used to check text, layout, images, colours, page order, and placement before full production.
+
+Q: Why should I check a proof carefully?
+A: Proof approval is an important final check before production. Review spelling, names, phone numbers, addresses, logos, image quality, colours, page order, size, and layout carefully.
+
+Q: What happens if I approve artwork with a mistake?
+A: An approved proof is treated as the final production instruction. Review every detail carefully before approval because corrections after production begins may require a new job.
+
+Q: Is white considered a printing colour?
+A: On white paper, white is usually the natural paper colour rather than printed ink. On coloured or dark material, white ink may be needed when white text or graphics are required.
+
+PAPER, MATERIALS, AND SIZES
+
+Q: What is GSM?
+A: GSM means grams per square metre. It is a common way to describe paper weight. Higher GSM paper is usually thicker and more rigid than lower GSM paper.
+
+Q: Why does GSM matter?
+A: Paper weight affects the feel, durability, folding behaviour, and use of the printed item. Lighter paper is often used for leaflets, while thicker paper is commonly used for visiting cards, covers, and premium materials.
+
+Q: What paper finishes are available?
+A: Common paper finishes include matte, glossy, silk, textured, and uncoated options. Material availability depends on the product and current stock, so use the Get a Quote form to confirm options.
+
+Q: What is matte paper?
+A: Matte paper has a soft, low-shine surface. It is often chosen for a clean, professional appearance and can be easier to read under bright light.
+
+Q: What is glossy paper?
+A: Glossy paper has a shiny surface that can make colours and photographs appear more vivid. It is often used for photo-heavy designs and colourful promotional material.
+
+Q: What standard sizes are used for flyers and posters?
+A: Common paper sizes include A5, A4, and A3, along with custom sizes where feasible. A4 is similar to a standard office sheet. Use the Get a Quote form to confirm the suitable size for your project.
+
+Q: How do I choose a size for a flyer or poster?
+A: Choose a size based on how much information must fit and where people will view it. Smaller sizes are useful for handouts, while larger sizes are better for wall displays and viewing from farther away.
+
+Q: Can I use custom paper or material?
+A: Material options depend on the product, size, design, finishing, and current availability. Use the Get a Quote form to request a specific paper, card, banner, or packaging material.
+
+LAMINATION AND PRINT FINISHING
+
+Q: What is print finishing?
+A: Print finishing is the work done after printing to improve appearance, durability, or usability. Common finishes include lamination, folding, die-cutting, UV coating, foiling, embossing, binding, and packaging.
+
+Q: What is lamination?
+A: Lamination adds a thin protective layer over printed material. It can help protect against fingerprints, moisture, scratches, and regular handling.
+
+Q: What is the difference between matte and glossy lamination?
+A: Matte lamination has a smooth, low-shine look. Glossy lamination has a shiny appearance and can make colours look more vivid.
+
+Q: When should I use lamination?
+A: Lamination is useful for items that are handled frequently or need extra protection, such as visiting cards, menus, covers, folders, cards, and promotional materials.
+
+Q: What is die-cutting?
+A: Die-cutting cuts printed material into a custom shape. It can be used for packaging, stickers, tags, folders, cards, and shaped promotional items.
+
+Q: What is foiling?
+A: Foiling adds a metallic decorative effect to selected parts of a design, such as a logo, title, name, border, or design detail.
+
+Q: What is embossing?
+A: Embossing raises selected parts of a design above the surface of the paper or card. It creates a textured, premium effect for logos, names, and decorative details.
+
+Q: What is UV coating?
+A: UV coating is a protective finish that can add shine to the full printed piece or to selected design areas. Spot UV means the glossy effect is applied only to selected elements, such as a logo or heading.
+
+Q: What is folding?
+A: Folding turns a flat printed sheet into a leaflet, menu, pamphlet, or brochure. Common folds include half-fold, tri-fold, gate-fold, and z-fold.
+
+BINDING
+
+Q: What is binding?
+A: Binding joins multiple printed pages into a booklet, report, catalogue, diary, manual, or book.
+
+Q: What is staple binding?
+A: Staple binding joins pages with staples along the fold or spine. It is commonly used for thinner booklets and small brochures.
+
+Q: What is spiral binding?
+A: Spiral binding uses a plastic or metal coil to hold pages together. It allows pages to turn easily and lie flat.
+
+Q: What is perfect binding?
+A: Perfect binding uses adhesive along the spine to create a clean, book-like finish. It is commonly used for catalogues, reports, books, and thicker documents.
+
+Q: What is hard binding?
+A: Hard binding uses a rigid cover for a strong, long-lasting, and premium book finish. It is suitable for diaries, books, formal reports, and documents that need durability.
+
+Q: Which binding method should I choose?
+A: The suitable method depends on page count, paper type, cover style, durability needs, budget, and whether pages need to lie flat. Submit your document details through the Get a Quote form for confirmation.
+
+PACKAGING, LABELS, AND STICKERS
+
+Q: What is packaging printing?
+A: Packaging printing creates branded materials that protect, present, and identify a product. It may include boxes, bags, labels, sleeves, stickers, tags, and wrapping materials.
+
+Q: Can packaging be customized?
+A: Packaging can be customized with logos, product names, brand colours, graphics, product details, and design elements. Use the Get a Quote form to share the product dimensions, packaging type, quantity, and intended use.
+
+Q: What information should be included on product packaging?
+A: Packaging commonly includes the product name, logo, key features, size or quantity, instructions where needed, contact information, and any legally required product details.
+
+Q: Can you print labels and stickers?
+A: Labels and stickers can be used for branding, product names, prices, packaging seals, ingredients, instructions, and promotions. Include the required shape, size, surface, and use case in the Get a Quote form.
+
+Q: What is a packaging sleeve?
+A: A packaging sleeve is a printed wrap that fits around a box, container, bottle, or product. It can add branding and product information without changing the main container.
+
+ORDER PROCESS
+
+Q: What is the printing process from start to finish?
+A: First, submit your project requirements through the Get a Quote form. The team reviews the details and confirms the job requirements. You then submit or finalize artwork, review and approve a proof where applicable, and the project moves into production, finishing, packing, and delivery or collection arrangements.
+
+Q: When should I submit my artwork?
+A: Submit artwork after you know the intended product, size, and printing requirements. If you are unsure, first submit a Get a Quote request describing your project.
+
+Q: Can I see a proof before full production?
+A: Proof availability depends on the product and production process. Mention that you would like proof review in the Get a Quote form.
+
+Q: How long does printing take?
+A: Production time depends on the product, quantity, artwork readiness, finishing, packaging, and current workload. Use the Get a Quote form and include your required date for confirmation.
+
+Q: Can I change my order after approving the proof?
+A: Changes after final approval may affect production and may not always be possible. Review all artwork details carefully before approving the proof.
+
+Q: What if I find a mistake in my approved artwork?
+A: Contact the team immediately through the website’s available contact method. Corrections may be possible only if production has not started, and any changes must be confirmed by the team.
+
+Q: How should I store printed materials?
+A: Store printed items in a cool, dry place away from direct sunlight, moisture, dust, and heavy pressure. Keep paper products flat where possible to reduce bending, scratching, or other damage.
+
+DELIVERY AND COLLECTION
+
+Q: Do you offer delivery?
+A: Delivery and collection arrangements depend on the location and order requirements. Include your location in the Get a Quote form so the team can confirm available options.
+
+Q: Do you deliver outside Lahore?
+A: Delivery arrangements outside Lahore depend on location and order requirements. Use the Get a Quote form to request confirmation.
+
+Q: Can I collect my completed order?
+A: Collection arrangements depend on the order status and confirmation from the team. Confirm collection details through the Get a Quote form.
+
+FINAL CUSTOMER GUIDANCE
+
+Q: What should I do if I am not sure which printing product I need?
+A: Describe your goal and where the item will be used. For example, explain whether it is for a shop, event, office, product launch, outdoor advertisement, or customer handout. Submit these details through the Get a Quote form.
+
+Q: What should I do if I do not have a design?
+A: Request design support through the Get a Quote form. Include your business or project name, purpose, required text, logo, images if available, preferred colours, and any design examples you like.
+
+Q: What should I do if I do not know which paper or material to use?
+A: Explain how the item will be used. For example, mention whether it is an outdoor banner, premium visiting card, folded brochure, menu, or product package. The team can confirm suitable options through the Get a Quote form.
+
+Q: Can the chatbot place my order?
+A: The chatbot can explain printing terms and help you identify the details needed for your project. To receive a formal quote and proceed with an order, please use the Get a Quote form on the website.

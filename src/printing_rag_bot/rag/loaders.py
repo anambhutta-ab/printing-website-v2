@@ -3,6 +3,8 @@ from typing import List
 
 from langchain_core.documents import Document
 
+KNOWLEDGE_BASE_FILENAME = "printing_consultant_knowledgebase.txt"
+
 
 def load_text_files_from_directory(
     directory: str | Path,
@@ -23,15 +25,12 @@ def load_text_files_from_directory(
 
     docs: List[Document] = []
 
-    for path in base_path.rglob("*.txt"):
-        if not path.is_file():
-            continue
+    path = base_path / KNOWLEDGE_BASE_FILENAME
+    if not path.is_file():
+        return docs
 
-        text = path.read_text(encoding=encoding)
-        if not text.strip():
-            # Skip empty files to avoid useless chunks
-            continue
-
+    text = path.read_text(encoding=encoding)
+    if text.strip():
         docs.append(
             Document(
                 page_content=text,

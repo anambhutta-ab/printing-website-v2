@@ -14,6 +14,8 @@ def build_rag_prompt() -> ChatPromptTemplate:
                     "Answer using the provided context only when it is relevant.\n"
                     "If the context does not contain enough information, say so clearly.\n"
                     "Be concise, accurate, and practical."
+                    "Never ever answer to a question from user that is irrelevant to printing consultancy or printing context.\n"
+                    "Always answer in a professional and friendly tone.\n"
                     "Format your answer in clear Markdown."
                     "Important formatting rules:"
                     "- Use short paragraphs."

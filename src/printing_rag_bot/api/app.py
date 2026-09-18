@@ -1,3 +1,7 @@
+
+    ## command to run this backend
+    # uvicorn src.printing_rag_bot.api.app:app --reload
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -75,5 +79,3 @@ def chat(request: ChatRequest):
             status_code=500,
             detail=str(error),
         )
-
-    

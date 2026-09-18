@@ -1,4 +1,4 @@
-"""Ingest uploaded PDF and text files into Qdrant Cloud.
+"""Ingest the printing knowledge base into Qdrant Cloud.
 
 Run from the repository root after setting QDRANT_URL and QDRANT_API_KEY.
 The embedding provider matches the existing chatbot collection:
@@ -17,11 +17,10 @@ from dotenv import load_dotenv
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from pypdf import PdfReader
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 
-UPLOADS_DIR = Path("data/raw/")
+KNOWLEDGE_BASE_PATH = Path("data/raw/printing_consultant_knowledgebase.txt")
 COLLECTION_NAME = "printing_rag"
 BATCH_SIZE = 100
 CHUNK_SIZE = 500
@@ -41,32 +40,24 @@ def required_environment_variable(name: str) -> str:
 
 
 def load_documents() -> list[Document]:
-    if not UPLOADS_DIR.exists():
-        raise FileNotFoundError(f"Upload directory does not exist: {UPLOADS_DIR}")
+    if not KNOWLEDGE_BASE_PATH.is_file():
+        raise FileNotFoundError(
+            f"Knowledge-base file does not exist: {KNOWLEDGE_BASE_PATH}"
+        )
 
-    documents: list[Document] = []
-    for path in sorted(UPLOADS_DIR.rglob("*")):
-        if not path.is_file():
-            continue
+    text = KNOWLEDGE_BASE_PATH.read_text(encoding="utf-8")
+    if not text.strip():
+        return []
 
-        suffix = path.suffix.lower()
-        if suffix == ".txt":
-            text = path.read_text(encoding="utf-8")
-        elif suffix == ".pdf":
-            reader = PdfReader(str(path))
-            text = "\n".join(page.extract_text() or "" for page in reader.pages)
-        else:
-            continue
-
-        if text.strip():
-            documents.append(
-                Document(
-                    page_content=text,
-                    metadata={"source": str(path), "file_name": path.name},
-                )
-            )
-
-    return documents
+    return [
+        Document(
+            page_content=text,
+            metadata={
+                "source": str(KNOWLEDGE_BASE_PATH),
+                "file_name": KNOWLEDGE_BASE_PATH.name,
+            },
+        )
+    ]
 
 
 def create_embeddings() -> EmbeddingProvider:
@@ -93,19 +84,7 @@ def split_documents(documents: list[Document]) -> list[Document]:
 
 def ensure_collection(client: QdrantClient, vector_size: int) -> None:
     if client.collection_exists(COLLECTION_NAME):
-        collection = client.get_collection(COLLECTION_NAME)
-        vectors_config = collection.config.params.vectors
-        if not isinstance(vectors_config, models.VectorParams):
-            raise RuntimeError(
-                f"Collection '{COLLECTION_NAME}' uses named vectors; "
-                "the ingestion script expects a single unnamed vector."
-            )
-        if vectors_config.size != vector_size:
-            raise RuntimeError(
-                f"Embedding dimension mismatch: embeddings={vector_size}, "
-                f"Qdrant collection={vectors_config.size}."
-            )
-        return
+        client.delete_collection(COLLECTION_NAME)
 
     client.create_collection(
         collection_name=COLLECTION_NAME,
@@ -152,7 +131,7 @@ def ingest() -> int:
     load_dotenv()
     documents = load_documents()
     if not documents:
-        print(f"No .pdf or .txt files found in {UPLOADS_DIR}.")
+        print(f"Knowledge-base file is empty: {KNOWLEDGE_BASE_PATH}")
         return 0
 
     chunks = split_documents(documents)
