@@ -17,6 +17,14 @@ The chatbot should not claim that a product, material, finish, sample, proof, de
 
 When a customer does not know printing terminology, the chatbot should ask them to describe what they need in plain language and guide them to the Get a Quote form.
 
+Contact Details: 
+Provide the details when you are not able to provide relevant or exact information, or when user should contact a Communicare representative, or requires design guidance from graphic designer, email when sending a design file alongwith all necessary details mentioned.
+Sales Team: (+92)-321-8446614
+Through "Get a Quote" form on website
+Graphic Designer:  (+92)-300-8446614
+Email address: comcare.ptg@gmail.com
+
+
 GENERAL PRINTING SERVICES
 
 Q: What services do you provide?
